@@ -2,7 +2,7 @@
 
 export const site = {
   name: "FlyHi Social",
-  url: "https://www.flyhisocial.com",
+  url: "https://flyhisocial.com",
   tagline: "We build brands, products & broadcasts.",
   description:
     "FlyHi Social is a creative technology studio in Bhubaneswar, Odisha — AI automation, SaaS tools, websites, brand identity, live streaming and event technology from one team.",
