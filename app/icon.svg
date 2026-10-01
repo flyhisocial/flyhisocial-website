@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34">
+  <style>
+    .base { fill: #000; }
+    @media (prefers-color-scheme: dark) {
+      .base { fill: #fff; }
+    }
+    .accent { fill: #EC3013; }
+  </style>
+  <rect class="base" x="0" y="24" width="10" height="10" />
+  <rect class="base" x="12" y="24" width="10" height="10" />
+  <rect class="base" x="12" y="12" width="10" height="10" />
+  <rect class="base" x="24" y="12" width="10" height="10" />
+  <rect class="accent" x="24" y="0" width="10" height="10" />
+</svg>
