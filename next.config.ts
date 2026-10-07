@@ -45,6 +45,8 @@ const nextConfig: NextConfig = {
       "marine-consultancy": "marine-consultancy", "marine": "marine-consultancy",
     };
     return [
+      // One canonical address: www.flyhisocial.com → flyhisocial.com, so Google doesn't see two copies of every page.
+      { source: "/:path*", has: [{ type: "host", value: "www.flyhisocial.com" }], destination: "https://flyhisocial.com/:path*", permanent: true },
       ...Object.entries(map).map(([from, to]) => ({ source: `/${from}`, destination: `/services/${to}`, permanent: true })),
       { source: "/services/app-web-development", destination: "/services/app-development", permanent: true },
     ];

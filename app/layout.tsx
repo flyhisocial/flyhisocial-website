@@ -18,17 +18,44 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = { themeColor: "#000000" };
 
+// One connected graph: the business, its founder and the website. Stable @ids let every page refer back to the same entity,
+// which is how Google's Knowledge Graph and AI assistants recognise "FlyHi Social" as one business.
+const ORG_ID = `${site.url}/#organization`;
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: site.name,
-  url: site.url,
-  email: site.email,
-  telephone: site.phoneE164,
-  description: site.description,
-  address: { "@type": "PostalAddress", streetAddress: site.address[0], addressLocality: "Bhubaneswar", addressRegion: "Odisha", postalCode: "751014", addressCountry: "IN" },
-  areaServed: "IN",
-  knowsAbout: ["AI automation", "WhatsApp AI assistants", "SaaS development", "Web development", "Brand identity", "Live streaming", "Event technology"],
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": ORG_ID,
+      name: site.name,
+      url: site.url,
+      logo: { "@type": "ImageObject", url: `${site.url}/icon.svg` },
+      image: `${site.url}/media/hero-poster.jpg`,
+      email: site.email,
+      telephone: site.phoneE164,
+      description: site.description,
+      slogan: site.tagline,
+      address: { "@type": "PostalAddress", streetAddress: site.address[0], addressLocality: "Bhubaneswar", addressRegion: "Odisha", postalCode: "751014", addressCountry: "IN" },
+      areaServed: [{ "@type": "City", name: "Bhubaneswar" }, { "@type": "State", name: "Odisha" }, { "@type": "Country", name: "India" }],
+      contactPoint: [
+        { "@type": "ContactPoint", contactType: "sales", telephone: site.phoneE164, email: site.email, areaServed: "IN" },
+        { "@type": "ContactPoint", contactType: "customer support", url: site.whatsapp, areaServed: "IN" },
+      ],
+      founder: { "@type": "Person", "@id": `${site.url}/#founder`, name: site.founder.name, jobTitle: site.founder.jobTitle, sameAs: site.founder.sameAs, worksFor: { "@id": ORG_ID } },
+      hasCredential: { "@type": "EducationalOccupationalCredential", name: site.credentials },
+      knowsAbout: ["AI automation", "WhatsApp AI assistants", "SaaS development", "Web development", "Brand identity", "Live streaming", "Event technology"],
+      ...(site.sameAs.length ? { sameAs: site.sameAs } : {}),
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${site.url}/#website`,
+      url: site.url,
+      name: site.name,
+      description: site.description,
+      inLanguage: "en-IN",
+      publisher: { "@id": ORG_ID },
+    },
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
