@@ -17,7 +17,20 @@ export const site = {
   credentials: "MSME (Udyam) registered",
   // Official FlyHi Social profiles (Instagram, LinkedIn, Facebook, YouTube, Google Business Profile, Justdial…).
   // Add the full URLs here — they feed the structured data that tells Google and AI assistants these accounts are the same business.
-  sameAs: [] as string[],
+  sameAs: [
+    "https://www.instagram.com/flyhisocial/",
+    "https://www.linkedin.com/company/flyhisocial/",
+    "https://www.facebook.com/flyhisocial",
+    "https://www.youtube.com/@flyhisocial",
+  ],
+  // Google Business Profile / Maps listing.
+  maps: "https://maps.app.goo.gl/rTK6x3baj1v829eD6",
+  socials: [
+    { name: "Instagram", href: "https://www.instagram.com/flyhisocial/" },
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/flyhisocial/" },
+    { name: "Facebook", href: "https://www.facebook.com/flyhisocial" },
+    { name: "YouTube", href: "https://www.youtube.com/@flyhisocial" },
+  ],
 };
 
 /* Homepage FAQs — plain, answer-first facts that search engines and AI assistants can quote. */

@@ -44,7 +44,8 @@ const jsonLd = {
       founder: { "@type": "Person", "@id": `${site.url}/#founder`, name: site.founder.name, jobTitle: site.founder.jobTitle, sameAs: site.founder.sameAs, worksFor: { "@id": ORG_ID } },
       hasCredential: { "@type": "EducationalOccupationalCredential", name: site.credentials },
       knowsAbout: ["AI automation", "WhatsApp AI assistants", "SaaS development", "Web development", "Brand identity", "Live streaming", "Event technology"],
-      ...(site.sameAs.length ? { sameAs: site.sameAs } : {}),
+      sameAs: [...site.sameAs, site.maps],
+      hasMap: site.maps,
     },
     {
       "@type": "WebSite",
