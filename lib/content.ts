@@ -13,7 +13,40 @@ export const site = {
   whatsappDisplay: "+91 7978559950",
   whatsapp: "https://wa.me/917978559950",
   address: ["Plot No. 4775/2, B.J.B. Nagar", "Bhubaneswar, Odisha 751014"],
+  founder: { name: "Santosh Kumar Panigrahi", jobTitle: "Founder", sameAs: ["https://www.instagram.com/i.m.santoshpanigrahi/"] },
+  credentials: "MSME (Udyam) registered",
+  // Official FlyHi Social profiles (Instagram, LinkedIn, Facebook, YouTube, Google Business Profile, Justdial…).
+  // Add the full URLs here — they feed the structured data that tells Google and AI assistants these accounts are the same business.
+  sameAs: [] as string[],
 };
+
+/* Homepage FAQs — plain, answer-first facts that search engines and AI assistants can quote. */
+export const homeFaqs: { q: string; a: string }[] = [
+  {
+    q: "What does FlyHi Social do?",
+    a: "FlyHi Social is a creative technology studio in Bhubaneswar, Odisha. One team builds websites, web apps and mobile apps, sets up AI automation such as WhatsApp assistants, creates brand identities and social media content, and runs live streaming and event technology.",
+  },
+  {
+    q: "Where is FlyHi Social based, and which areas do you serve?",
+    a: "We are at Plot No. 4775/2, B.J.B. Nagar, Bhubaneswar, Odisha 751014. We work on site across Bhubaneswar and Odisha, and remotely with clients across India.",
+  },
+  {
+    q: "Do you provide live streaming and hybrid event services in Bhubaneswar?",
+    a: "Yes. We stream conferences, launches and ceremonies to YouTube, Facebook, Zoom or private links, and run hybrid sessions with remote speakers. For ISACON Odisha 2026 we ran seventeen hybrid sessions.",
+  },
+  {
+    q: "Can you build a WhatsApp AI assistant for my business?",
+    a: "Yes. We build WhatsApp and website assistants trained on your services, prices and FAQs. They answer enquiries, take bookings with reminders and hand over to a person when needed.",
+  },
+  {
+    q: "How much does a website or app cost?",
+    a: "Our packages have a fixed scope and one clear price, agreed before work starts. The price depends on what you need, so share your requirements on a short call or WhatsApp and we send a written quote.",
+  },
+  {
+    q: "How do I contact FlyHi Social?",
+    a: "Call +91 9090031316, WhatsApp +91 7978559950 or email flyhisocials@gmail.com.",
+  },
+];
 
 export type Practice = { num: string; name: string; items: string[]; blurb: string; cta: string; href: string };
 
