@@ -48,6 +48,12 @@ export default function Footer() {
           <a href={`mailto:${site.email}`} className="hover:text-red">{site.email}</a>
           <a href={`tel:${site.phoneE164}`} className="hover:text-red">Call {site.phoneDisplay}</a>
           <a href={site.whatsapp} className="hover:text-red">WhatsApp {site.whatsappDisplay}</a>
+          <a href={site.maps} target="_blank" rel="noopener" className="hover:text-red">Find us on Google Maps</a>
+          <div className="mt-2 flex flex-wrap gap-x-4 gap-y-2">
+            {site.socials.map((s) => (
+              <a key={s.name} href={s.href} target="_blank" rel="me noopener" className="text-white hover:text-red">{s.name}</a>
+            ))}
+          </div>
         </div>
       </div>
       <div ref={big} className="flex overflow-hidden leading-[0.8]" aria-hidden="true"
