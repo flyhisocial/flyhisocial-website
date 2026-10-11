@@ -58,7 +58,7 @@ async function assertPublic(u: URL) {
   if (!addrs.length || addrs.some((a) => isPrivateAddress(a.address))) throw new FetchError("blocked");
 }
 
-export async function fetchPage(input: string, { timeoutMs = 9000, maxBytes = 1_500_000, maxRedirects = 4 } = {}) {
+export async function fetchPage(input: string, { timeoutMs = 7000, maxBytes = 1_500_000, maxRedirects = 4 } = {}) {
   let url = normaliseUrl(input);
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), timeoutMs);
@@ -71,8 +71,9 @@ export async function fetchPage(input: string, { timeoutMs = 9000, maxBytes = 1_
           redirect: "manual",
           signal: ctrl.signal,
           headers: {
-            "User-Agent": "Mozilla/5.0 (compatible; FlyHiCopyCheck/1.0; +https://flyhisocial.com/check)",
-            Accept: "text/html,application/xhtml+xml",
+            // A normal browser identity: many sites (and their firewalls) refuse unknown bots outright.
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",
+            Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
             "Accept-Language": "en-IN,en;q=0.9",
           },
         });
@@ -104,6 +105,39 @@ export async function fetchPage(input: string, { timeoutMs = 9000, maxBytes = 1_
   } catch (e) {
     if (e instanceof FetchError) throw e;
     throw new FetchError(ctrl.signal.aborted ? "timeout" : "unreachable");
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+/* Fallback for sites that block us or build their text with JavaScript: read the page through
+   r.jina.ai, which loads it in a real browser and returns the rendered HTML. The target address is
+   still checked here first, so this can't be used to reach private networks either.
+   Optional JINA_API_KEY raises Jina's free rate limit. */
+export async function fetchViaReader(input: string, { timeoutMs = 12000, maxBytes = 1_500_000 } = {}) {
+  const target = normaliseUrl(input);
+  await assertPublic(target);
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+  try {
+    let res: Response;
+    try {
+      res = await fetch(`https://r.jina.ai/${target.toString()}`, {
+        signal: ctrl.signal,
+        headers: {
+          "X-Return-Format": "html",
+          "X-Timeout": "10",
+          ...(process.env.JINA_API_KEY ? { Authorization: `Bearer ${process.env.JINA_API_KEY}` } : {}),
+        },
+      });
+    } catch {
+      throw new FetchError(ctrl.signal.aborted ? "timeout" : "unreachable");
+    }
+    if (!res.ok) throw new FetchError("http_error", res.status);
+    const buf = new Uint8Array(await res.arrayBuffer());
+    const html = new TextDecoder("utf-8", { fatal: false }).decode(buf.byteLength > maxBytes ? buf.slice(0, maxBytes) : buf);
+    if (!/<[a-z!][^>]*>/i.test(html)) throw new FetchError("not_html");
+    return { html, finalUrl: target.toString() };
   } finally {
     clearTimeout(timer);
   }

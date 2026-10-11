@@ -1,12 +1,12 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { analyse } from "@/lib/aicheck";
-import { fetchPage, FetchError } from "@/lib/safefetch";
+import { fetchPage, fetchViaReader, FetchError } from "@/lib/safefetch";
 
 // AI copy check: fetches a public page server-side and scores how AI-written its copy sounds.
 // Nothing is stored; the per-IP counters below live in memory for ten minutes.
 
 export const runtime = "nodejs";
-export const maxDuration = 20;
+export const maxDuration = 25;
 
 const WINDOW_MS = 10 * 60 * 1000;
 const MAX_PER_WINDOW = 8;
@@ -26,7 +26,7 @@ const MESSAGES: Record<string, string> = {
   unreachable: "We couldn't reach that website. Check the address and try again.",
   not_html: "That address isn't a web page.",
   timeout: "That website took too long to respond. Try again in a minute.",
-  http_error: "That website returned an error when we tried to open it.",
+  http_error: "That website blocked our check. WhatsApp us the address and we'll check it by hand for free.",
   too_many_requests: "You've run a lot of checks. Please wait ten minutes, or WhatsApp us and we'll check it for you.",
   forbidden: "Please use the form on flyhisocial.com/check.",
   invalid: "Please enter a website address.",
@@ -52,18 +52,31 @@ export async function POST(req: NextRequest) {
   } catch { return fail(400, "invalid"); }
   if (!url) return fail(422, "invalid");
 
-  try {
-    const { html, finalUrl } = await fetchPage(url);
-    const result = analyse(html);
-    if (result.words < 60) {
-      return NextResponse.json(
-        { ok: false, error: "too_little_text", url: finalUrl, message: "We could only read a few words on that page. It may load its text with JavaScript, which our quick check can't read. WhatsApp us and we'll check it by hand for free." },
-        { status: 200, headers: { "Cache-Control": "no-store" } },
-      );
+  // 1. Read the page directly. 2. If the site blocks us, fails, or builds its text with JavaScript,
+  //    read it again through a real-browser reader. Bad or private addresses never get a second try.
+  let page: { html: string; finalUrl: string } | null = null;
+  let firstError: FetchError | null = null;
+  try { page = await fetchPage(url); } catch (e) {
+    firstError = e instanceof FetchError ? e : new FetchError("unreachable");
+    if (firstError.code === "bad_url" || firstError.code === "blocked") {
+      return fail(firstError.code === "bad_url" ? 422 : 200, firstError.code);
     }
-    return NextResponse.json({ ok: true, url: finalUrl, ...result }, { headers: { "Cache-Control": "no-store" } });
-  } catch (e) {
-    const code = e instanceof FetchError ? e.code : "unreachable";
-    return fail(code === "bad_url" ? 422 : 200, code);
   }
+  let result = page ? analyse(page.html) : null;
+  if (!result || result.words < 60) {
+    try {
+      const rendered = await fetchViaReader(url);
+      const r2 = analyse(rendered.html);
+      if (!result || r2.words > result.words) { page = rendered; result = r2; }
+    } catch { /* keep whatever the direct read gave us */ }
+  }
+
+  if (!page || !result) return fail(200, firstError?.code ?? "unreachable");
+  if (result.words < 60) {
+    return NextResponse.json(
+      { ok: false, error: "too_little_text", url: page.finalUrl, message: "We could only read a few words on that page. WhatsApp us and we'll check it by hand for free." },
+      { status: 200, headers: { "Cache-Control": "no-store" } },
+    );
+  }
+  return NextResponse.json({ ok: true, url: page.finalUrl, ...result }, { headers: { "Cache-Control": "no-store" } });
 }
