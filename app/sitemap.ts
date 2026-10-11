@@ -11,6 +11,7 @@ const lastModified = new Date();
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: site.url, lastModified, changeFrequency: "weekly", priority: 1 },
+    { url: `${site.url}/check`, lastModified, changeFrequency: "monthly", priority: 0.9 },
     ...services.map((s) => ({ url: `${site.url}/services/${s.slug}`, lastModified, changeFrequency: "monthly" as const, priority: 0.9 })),
     ...solutions.map((s) => ({ url: `${site.url}/services/${s.slug}`, lastModified, changeFrequency: "monthly" as const, priority: 0.8 })),
     ...projects.map((p) => ({ url: `${site.url}/work/${p.slug}`, lastModified, changeFrequency: "yearly" as const, priority: 0.7 })),
