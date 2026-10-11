@@ -57,7 +57,7 @@ export const homeFaqs: { q: string; a: string }[] = [
   },
   {
     q: "Our website copy was written with ChatGPT. Can you make it sound human?",
-    a: "Yes. Our AI Copy Clean-up finds the patterns that make text read as machine-written, such as em dashes, formula slogans and template layouts, and rewrites up to five pages in your own voice. It costs ₹4,999 and takes about three working days. We used it on our own site first.",
+    a: "Yes. Our AI Copy Clean-up finds the patterns that make text read as machine-written, such as em dashes, formula slogans and template layouts, and rewrites up to five pages in your own voice. It costs ₹4,999 and takes about three working days. We used it on our own site first. You can test your site for free at flyhisocial.com/check.",
   },
   {
     q: "How do I contact FlyHi Social?",

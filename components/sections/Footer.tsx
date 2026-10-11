@@ -40,6 +40,7 @@ export default function Footer() {
           <TransitionLink href="/#work" className="hover:text-red">Work</TransitionLink>
           <TransitionLink href="/#ai" className="hover:text-red">AI solutions</TransitionLink>
           <TransitionLink href="/#packages" className="hover:text-red">Packages</TransitionLink>
+          <TransitionLink href="/check" className="hover:text-red">Free AI copy check</TransitionLink>
           <TransitionLink href="/#contact" className="hover:text-red">Contact</TransitionLink>
         </nav>
         <div className="col-span-2 flex flex-col gap-3.5 text-[15px] leading-relaxed text-[#b5b5b5] lg:col-span-2">
