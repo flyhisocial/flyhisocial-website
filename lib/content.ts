@@ -53,7 +53,7 @@ export const homeFaqs: { q: string; a: string }[] = [
   },
   {
     q: "How much does a website or app cost?",
-    a: "Our packages have a fixed scope and one clear price, agreed before work starts. The price depends on what you need, so share your requirements on a short call or WhatsApp and we send a written quote.",
+    a: "A five-page Launch Website starts at ₹24,999. Larger websites, web apps and mobile apps are quoted after a short call, with a fixed scope and one clear price agreed before work starts. We take 50% to start and 50% on handover.",
   },
   {
     q: "How do I contact FlyHi Social?",
@@ -235,31 +235,35 @@ export const projects: Project[] = [
   },
 ];
 
-/* Packages — fixed scope. Add a price per package
-   (e.g. price: "From ₹25,000") when you're ready to show one. */
-export type Package = { name: string; bestFor: string; body: string; includes: string[]; price?: string; hot?: boolean };
+/* Packages — fixed scope and a published starting price.
+   price = what's paid up front; monthly = the running fee, if any; delivery = time to go live. */
+export type Package = { name: string; bestFor: string; body: string; includes: string[]; price: string; monthly?: string; delivery: string; hot?: boolean };
 export const packages: Package[] = [
   {
     name: "WhatsApp AI Assistant",
     bestFor: "Clinics, salons, coaching centres, service businesses", hot: true,
+    price: "₹14,999", monthly: "+ ₹2,999/month", delivery: "Live in 7 days",
     body: "An assistant on your WhatsApp number that answers questions, takes bookings and follows up, 24/7.",
     includes: ["Trained on your services, prices & FAQs", "Bookings with reminders", "Hands over to a human when needed", "Weekly conversation report"],
   },
   {
     name: "Launch Website",
     bestFor: "New businesses, rebrands, anyone without a site that sells",
+    price: "₹24,999", delivery: "Live in 14 days",
     body: "A fast, premium website that looks great on every phone and turns visitors into enquiries.",
     includes: ["Up to 5 pages, designed for your brand", "WhatsApp chat & enquiry form", "Google-ready SEO basics", "Hosting set up & handed over"],
   },
   {
     name: "Lead Autopilot",
     bestFor: "Businesses running ads or getting enquiries from many places",
+    price: "₹19,999", monthly: "+ ₹1,999/month", delivery: "Live in 10 days",
     body: "Every enquiry from your website, ads and Instagram in one place, answered in minutes instead of days.",
     includes: ["All lead sources into one sheet or CRM", "Instant WhatsApp & email replies", "Follow-up reminders for your team", "Monthly lead report"],
   },
   {
     name: "Content Engine",
     bestFor: "Brands that want to show up on Instagram every week",
+    price: "₹19,999", monthly: "per month", delivery: "First posts in 7 days",
     body: "A month of reels and posts, planned and produced with AI-assisted scripting in your brand voice.",
     includes: ["12 reels or posts a month", "Scripts, captions & hashtags", "Posting calendar & scheduling", "Monthly performance recap"],
   },
