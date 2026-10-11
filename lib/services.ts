@@ -58,6 +58,7 @@ export const services: Service[] = [
       { q: "Is the website optimised for Google?", a: "Every site ships with fast loading, clean page structure, meta titles and descriptions, a sitemap and structured data so search engines understand your business." },
       { q: "Can you add WhatsApp and online booking?", a: "Yes. WhatsApp chat, enquiry forms that reach you instantly, and booking or payment flows are all common additions." },
       { q: "Do you also build mobile apps and SaaS products?", a: "Yes. We build Android and iOS apps and full SaaS products, including our own, SANHEM Health." },
+      { q: "Can you fix website copy that sounds like AI wrote it?", a: "Yes. We rewrite up to five pages so they read like your business wrote them, and remove the habits readers now spot, like em dashes and three-word slogans. AI Copy Clean-up costs ₹4,999." },
     ],
     related: ["nature-cm-2026", "sanhem-health"],
   },
