@@ -16,6 +16,14 @@ function webglOK() {
   } catch { return false; }
 }
 
+// Phones and low-memory devices get the static mark: the live 3D scene keeps the main thread busy
+// and makes taps and scrolling lag on mid-range Android (and drags down Google's mobile speed score).
+function lightDevice() {
+  const touch = window.matchMedia("(pointer: coarse)").matches && window.innerWidth < 1024;
+  const mem = (navigator as Navigator & { deviceMemory?: number }).deviceMemory;
+  return touch || (typeof mem === "number" && mem <= 4);
+}
+
 export default function Object3D({ kind, className = "" }: { kind: SceneKind; className?: string }) {
   const box = useRef<HTMLDivElement>(null);
   const [near, setNear] = useState(false);     // mount once close to the viewport
@@ -32,7 +40,7 @@ export default function Object3D({ kind, className = "" }: { kind: SceneKind; cl
   }, []);
 
   useEffect(() => {
-    if (!webglOK()) { setOk(false); return; }
+    if (lightDevice() || !webglOK()) { setOk(false); return; }
     const el = box.current; if (!el) return;
     const io = new IntersectionObserver(([e]) => {
       if (e.isIntersecting) setNear(true);

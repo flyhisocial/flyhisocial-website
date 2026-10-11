@@ -83,7 +83,7 @@ export default function Header() {
         className="wrap fixed inset-x-0 top-0 z-50 flex items-center justify-between py-5 transition-[background-color,border-color] duration-500 md:py-7"
         style={{ background: solid || open ? "#080808" : "transparent", borderBottom: `1px solid ${solid && !open ? "#1e1e1e" : "transparent"}` }}
       >
-        <TransitionLink href="/" aria-label="FlyHi Social home"><Wordmark size={20} /></TransitionLink>
+        <TransitionLink href="/"><span aria-hidden="true"><Wordmark size={20} /></span><span className="sr-only">FlyHi Social home</span></TransitionLink>
         <nav aria-label="Main" className="hidden items-center gap-9 text-[15px] font-medium lg:flex">
           {NAV.map((n) => n.label === "Services" ? (
             <span key={n.href} className="flex items-center" onPointerEnter={openMega} onPointerLeave={closeMega}
