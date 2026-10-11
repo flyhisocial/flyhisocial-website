@@ -5,7 +5,7 @@ import { site } from "@/lib/content";
 import { getLenis } from "@/lib/motion";
 import { Arrow, Magnetic } from "./effects";
 
-type Finding = { id: string; label: string; points: number; detail: string; why: string; evidence: string[] };
+type Finding = { id: string; kind: "copy" | "design"; label: string; points: number; detail: string; why: string; evidence: string[] };
 type QuickWin = { id: string; label: string; detail: string };
 type Result = { ok: true; url: string; words: number; score: number; verdict: string; findings: Finding[]; quickWins: QuickWin[] };
 type Failure = { ok: false; error: string; message: string; url?: string };
@@ -101,7 +101,7 @@ function Report({ r }: { r: Result }) {
           <div className="h-2 w-full overflow-hidden rounded-full bg-[#1c1c1c]" role="img" aria-label={`${r.score} out of 100`}>
             <div className="h-full rounded-full" style={{ width: `${Math.max(2, r.score)}%`, background: tone }} />
           </div>
-          <p className="text-[15px] text-mute">We read {r.words.toLocaleString("en-IN")} words on this page. Higher means it sounds more like an AI tool wrote it.</p>
+          <p className="text-[15px] text-mute">We read {r.words.toLocaleString("en-IN")} words and the page code. Higher means it looks and sounds more like an AI tool made it.</p>
         </div>
       </section>
 
@@ -116,7 +116,10 @@ function Report({ r }: { r: Result }) {
             <div key={f.id} className="grid grid-cols-1 gap-3 border-t border-line py-7 md:grid-cols-12 md:gap-6">
               <div className="flex items-baseline justify-between gap-4 md:col-span-4 md:flex-col md:justify-start md:gap-2">
                 <h3 className="text-[22px] font-extrabold tracking-[-0.02em]">{f.label}</h3>
-                <span className="text-[15px] font-bold text-red tabular-nums">+{f.points}</span>
+                <span className="flex items-center gap-3 text-[15px] font-bold tabular-nums">
+                  <span className="text-[12px] uppercase tracking-[0.14em] text-mute">{f.kind === "design" ? "Design" : "Words"}</span>
+                  <span className="text-red">+{f.points}</span>
+                </span>
               </div>
               <div className="flex min-w-0 flex-col gap-3 md:col-span-8">
                 <p className="text-[17px] leading-relaxed">{f.detail}</p>

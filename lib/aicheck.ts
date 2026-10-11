@@ -3,6 +3,7 @@
 
 export type Finding = {
   id: string;
+  kind: "copy" | "design";
   label: string;
   points: number; // added to the AI score
   detail: string; // what we found, in plain words
@@ -93,7 +94,7 @@ export function analyse(html: string): CheckResult {
   const dashes = all.reduce((n, l) => n + countMatches(l, /—/g), 0);
   if (dashes > 0) {
     findings.push({
-      id: "em-dash", label: "Em dashes", points: dashes >= 6 ? 30 : dashes >= 3 ? 20 : 10,
+      id: "em-dash", kind: "copy", label: "Em dashes", points: dashes >= 6 ? 30 : dashes >= 3 ? 20 : 10,
       detail: `${dashes} em dash${dashes === 1 ? "" : "es"} (—) in the page text${dashLines.some((l) => l === title || l === metaDesc) ? ", including your Google title or description" : ""}.`,
       why: "AI writing tools use the long dash constantly. Readers who use ChatGPT now spot it straight away.",
       evidence: uniq(dashLines).slice(0, 3).map((l) => clip(l, l.indexOf("—"))),
@@ -105,7 +106,7 @@ export function analyse(html: string): CheckResult {
   const beatLines = lines.filter((l) => beat.test(l));
   if (beatLines.length) {
     findings.push({
-      id: "three-beat", label: "Three-word slogan", points: 15,
+      id: "three-beat", kind: "copy", label: "Three-word slogan", points: 15,
       detail: "A slogan made of three one-word sentences.",
       why: "It's a formula AI tools reach for when asked for a tagline, so it reads as generic.",
       evidence: uniq(beatLines).slice(0, 2).map((l) => clip(l.match(beat)?.[0] ?? l)),
@@ -121,7 +122,7 @@ export function analyse(html: string): CheckResult {
   if (hits.length) {
     const total = hits.reduce((n, h) => n + h.n, 0);
     findings.push({
-      id: "buzzwords", label: "AI buzzwords", points: Math.min(25, 5 * hits.length),
+      id: "buzzwords", kind: "copy", label: "AI buzzwords", points: Math.min(25, 4 * hits.length + 2 * (total - hits.length)),
       detail: `${total} use${total === 1 ? "" : "s"} of words AI tools overuse: ${hits.slice(0, 6).map((h) => `“${h.w}”${h.n > 1 ? ` ×${h.n}` : ""}`).join(", ")}.`,
       why: "Words like these say nothing specific about your business, and readers skim past them.",
       evidence: [],
@@ -133,7 +134,7 @@ export function analyse(html: string): CheckResult {
   const contrastLines = lines.filter((l) => contrast.test(l));
   if (contrastLines.length) {
     findings.push({
-      id: "contrast", label: "“Not just X” phrasing", points: Math.min(15, 8 * contrastLines.length),
+      id: "contrast", kind: "copy", label: "“Not just X” phrasing", points: Math.min(15, 8 * contrastLines.length),
       detail: `${contrastLines.length} sentence${contrastLines.length === 1 ? "" : "s"} built as “not just this, but that”.`,
       why: "AI copy leans on this pattern to sound important. Saying the thing directly is stronger.",
       evidence: uniq(contrastLines).slice(0, 2).map((l) => clip(l, l.search(contrast))),
@@ -144,7 +145,7 @@ export function analyse(html: string): CheckResult {
   const emojiLines = lines.filter((l) => /^(\p{Extended_Pictographic}|✅|✔)/u.test(l));
   if (emojiLines.length >= 3) {
     findings.push({
-      id: "emoji-bullets", label: "Emoji bullet points", points: 10,
+      id: "emoji-bullets", kind: "copy", label: "Emoji bullet points", points: 10,
       detail: `${emojiLines.length} lines start with an emoji, like 🚀 or ✅.`,
       why: "Emoji bullets are a default of chatbot-written lists.",
       evidence: uniq(emojiLines).slice(0, 2).map((l) => clip(l)),
@@ -156,9 +157,84 @@ export function analyse(html: string): CheckResult {
   const tmplLines = lines.filter((l) => tmpl.test(l));
   if (tmplLines.length) {
     findings.push({
-      id: "template-headings", label: "Template headings", points: 10,
+      id: "template-headings", kind: "copy", label: "Template headings", points: 10,
       detail: `Stock headings like ${uniq(tmplLines).slice(0, 2).map((l) => `“${l}”`).join(" and ")}.`,
       why: "These headings appear on thousands of sites and tell visitors nothing about you.",
+      evidence: [],
+    });
+  }
+
+
+  // 7. Stock hero headline (the first main heading).
+  const h1 = decode((html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] ?? "").replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim();
+  const stockHero = /^(transform|revolutioni[sz]e|elevate|unlock|empower|supercharge|reimagine|redefin(e|ing)|unleash|accelerate)\b|^(the future of|welcome to the future|next[- ]generation|your (one-stop|all-in-one|ultimate))\b|\b(ai[- ]powered|powered by ai)\b/i;
+  if (h1 && stockHero.test(h1)) {
+    findings.push({
+      id: "stock-hero", kind: "copy", label: "Stock headline", points: 12,
+      detail: "Your main heading opens with a phrase AI tools default to.",
+      why: "Visitors read the headline first. A generic one makes the whole site feel template-made.",
+      evidence: [clip(h1)],
+    });
+  }
+
+  // 8. Row of round-number brags ("10,000+", "99%", "24/7").
+  const statRe = /^(\d{1,3}(,\d{3})*(\.\d+)?|\d+(\.\d+)?)\s?(\+|%|k\+?|m\+?|x)$|^24\/7$/i;
+  const stats = lines.filter((l) => statRe.test(l));
+  if (stats.length >= 3) {
+    findings.push({
+      id: "stat-row", kind: "copy", label: "Round-number brag row", points: 8,
+      detail: `${stats.length} big round numbers shown on their own, like ${uniq(stats).slice(0, 4).join(", ")}.`,
+      why: "A row of numbers with no source is a fixture of AI-built landing pages, and visitors don't trust it.",
+      evidence: [],
+    });
+  }
+
+  // 9. Five-star testimonial blocks.
+  // Star glyphs and star aria-labels often mark the same rating, so take the larger count, not the sum.
+  const stars = Math.max(countMatches(html, /★{5}/g), countMatches(html, /aria-label=["'][^"']*(5 (out of 5 )?stars|rated 5)/gi));
+  if (stars >= 2) {
+    findings.push({
+      id: "five-stars", kind: "copy", label: "Five-star testimonial cards", points: 6,
+      detail: `${stars} perfect five-star ratings on the page.`,
+      why: "Every review at five stars, with no link to Google or another source, reads as invented.",
+      evidence: [],
+    });
+  }
+
+  // Design patterns visible in the page code (common in AI website builders).
+  const gradientText = countMatches(html, /bg-clip-text|background-clip:\s*text/gi);
+  if (gradientText) {
+    findings.push({
+      id: "gradient-text", kind: "design", label: "Gradient text", points: 10,
+      detail: `${gradientText} heading${gradientText === 1 ? "" : "s"} filled with a colour gradient.`,
+      why: "Gradient headlines are one of the most recognisable looks of AI-generated sites.",
+      evidence: [],
+    });
+  }
+  const orbs = countMatches(html, /\bblur-(2xl|3xl)\b|blur\(\s*([4-9]\d|[1-9]\d{2})px\s*\)/gi);
+  if (orbs) {
+    findings.push({
+      id: "glow-orbs", kind: "design", label: "Glowing background blobs", points: 8,
+      detail: "Large blurred colour shapes behind the content.",
+      why: "Soft glowing orbs are a default background of AI site builders.",
+      evidence: [],
+    });
+  }
+  const glass = countMatches(html, /backdrop-blur|backdrop-filter:\s*blur/gi);
+  if (glass >= 3) {
+    findings.push({
+      id: "frosted-glass", kind: "design", label: "Frosted glass panels", points: 4,
+      detail: `${glass} see-through blurred panels.`,
+      why: "Used everywhere, frosted glass makes a site look like every other AI-built page.",
+      evidence: [],
+    });
+  }
+  const iconCards = countMatches(html, /<svg\b[\s\S]{0,1500}?<\/svg>\s*(?:<\/?[a-z][^>]*>\s*){0,4}<h3\b/gi);
+  if (iconCards >= 3) {
+    findings.push({
+      id: "icon-cards", kind: "design", label: "Icon card grid", points: 10,
+      detail: `${iconCards} cards built as icon, title and one line of text.`,
+      why: "It's how AI tools fill a features section when there's nothing specific to show.",
       evidence: [],
     });
   }
