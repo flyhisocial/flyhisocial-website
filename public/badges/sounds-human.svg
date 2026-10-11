@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="60" viewBox="0 0 220 60" role="img" aria-label="Sounds human: checked with the FlyHi AI copy checker">
+  <rect width="220" height="60" rx="12" fill="#000"/>
+  <g transform="translate(16 18)">
+    <rect x="16" y="0" width="7" height="7" fill="#EC3013"/>
+    <rect x="8" y="8" width="7" height="7" fill="#fff"/>
+    <rect x="16" y="8" width="7" height="7" fill="#fff"/>
+    <rect x="0" y="16" width="7" height="7" fill="#fff"/>
+    <rect x="8" y="16" width="7" height="7" fill="#fff"/>
+  </g>
+  <text x="54" y="28" fill="#fff" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800">Sounds human</text>
+  <text x="54" y="45" fill="#bdbdbd" font-family="Archivo, 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600">Checked by FlyHi Social</text>
+</svg>

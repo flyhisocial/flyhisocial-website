@@ -84,7 +84,9 @@ function Report({ r }: { r: Result }) {
   const host = r.url.replace(/^https?:\/\//, "").replace(/\/$/, "");
   const clean = r.findings.length === 0;
   const tone = r.score <= 15 ? "#7dd3a0" : r.score <= 35 ? "#f5c451" : "var(--color-red)";
-  const wa = waLink(`Hi FlyHi, I checked ${host} on your AI copy checker. It scored ${r.score}/100 (${r.verdict}). I'd like the AI Copy Clean-up.`);
+  const wa = waLink(clean
+    ? `Hi FlyHi, I checked ${host} on your AI copy checker and it scored ${r.score}/100. I'd like you to look at speed, Google visibility and enquiries.`
+    : `Hi FlyHi, I checked ${host} on your AI copy checker. It scored ${r.score}/100 (${r.verdict}). I'd like the AI Copy Clean-up.`);
 
   return (
     <div className="flex flex-col gap-12">
@@ -148,6 +150,8 @@ function Report({ r }: { r: Result }) {
         </section>
       )}
 
+      {r.score <= 15 && <Badge />}
+
       <Offer clean={clean} wa={wa} host={host} score={r.score} verdict={r.verdict} />
     </div>
   );
@@ -189,7 +193,7 @@ function Offer({ clean, wa, host, score, verdict }: { clean: boolean; wa: string
             : `AI Copy Clean-up: we rewrite up to five pages so they sound like your business wrote them, in about three working days. You approve every change before it goes live.`}
         </p>
         <div className="flex flex-col gap-3 sm:flex-row">
-          <Magnetic><a href={wa} className="btn btn-ink w-full justify-center">Fix it on WhatsApp <Arrow /></a></Magnetic>
+          <Magnetic><a href={wa} className="btn btn-ink w-full justify-center">{clean ? "Message us on WhatsApp" : "Fix it on WhatsApp"} <Arrow /></a></Magnetic>
         </div>
         <p className="text-[14px] text-[#595959]">50% to start, 50% when you&apos;re happy. We used this on our own site first.</p>
       </div>
@@ -210,6 +214,35 @@ function Offer({ clean, wa, host, score, verdict }: { clean: boolean; wa: string
             {sent === "error" && <p role="alert" className="text-[15px] font-semibold">That didn&apos;t send. Please use WhatsApp instead.</p>}
           </form>
         )}
+      </div>
+    </section>
+  );
+}
+
+const BADGE_HTML = `<a href="${site.url}/check" title="Free AI copy checker"><img src="${site.url}/badges/sounds-human.svg" alt="Sounds human: checked with the FlyHi AI copy checker" width="220" height="60" loading="lazy"></a>`;
+
+function Badge() {
+  const [copied, setCopied] = useState<"idle" | "copied" | "select">("idle");
+  const code = useRef<HTMLTextAreaElement>(null);
+  const copy = async () => {
+    try { await navigator.clipboard.writeText(BADGE_HTML); setCopied("copied"); }
+    catch { code.current?.select(); setCopied("select"); }
+  };
+  return (
+    <section aria-labelledby="badge" className="grid grid-cols-1 gap-6 rounded-[22px] border border-line bg-[#0b0b0b] p-7 md:grid-cols-12 md:p-9">
+      <div className="flex flex-col gap-4 md:col-span-5">
+        <h2 id="badge" className="text-[24px] font-extrabold tracking-[-0.02em]">Show visitors your site sounds human</h2>
+        <p className="text-[16px] leading-relaxed text-[#b5b5b5]">Add this badge to your footer. It links to this checker so anyone can test it themselves.</p>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/badges/sounds-human.svg" alt="Sounds human: checked with the FlyHi AI copy checker" width={220} height={60} className="w-[220px]" />
+      </div>
+      <div className="flex min-w-0 flex-col gap-3 md:col-span-7">
+        <label htmlFor="badge-code" className="text-[13px] font-bold uppercase tracking-[0.14em] text-mute">Embed code</label>
+        <textarea id="badge-code" ref={code} readOnly rows={4} value={BADGE_HTML}
+          className="w-full resize-none rounded-[12px] border border-line bg-black p-4 font-mono text-[13px] leading-relaxed text-[#cfcfcf] focus:border-white focus:outline-none" />
+        <button type="button" onClick={copy} className="btn btn-ghost w-fit">
+          {copied === "copied" ? "Copied" : copied === "select" ? "Selected, press Ctrl+C" : "Copy code"}
+        </button>
       </div>
     </section>
   );

@@ -76,6 +76,7 @@ export default function Packages() {
             <div className="text-[26px] font-extrabold leading-tight tracking-[-0.02em] md:text-[32px]">Not sure where to start?</div>
             <p className="max-w-[640px] text-[16px] leading-relaxed text-[#3d3d3d] md:text-[18px]">
               Book a free 20-minute AI audit. We&apos;ll look at how you get and serve customers today, and show you the one thing worth automating first.
+              Or test your website now with our <TransitionLink href="/check" className="font-semibold text-black underline underline-offset-4 hover:text-red-deep">free AI copy checker</TransitionLink>.
             </p>
           </div>
           <Magnetic><a href={audit} className="btn btn-ink">Book a free AI audit <Arrow /></a></Magnetic>
