@@ -21,7 +21,7 @@ export default function Packages() {
           <SplitReveal className="h2" lines={["Pick a package.", <>We&apos;ll handle <span className="whitespace-nowrap text-red">the rest.</span></>]} />
         </div>
         <Reveal as="p" className="max-w-[400px] shrink-0 text-[17px] leading-relaxed text-[#b5b5b5] md:text-[19px]">
-          Ready-made solutions with a fixed scope and one clear price. Start with what your business needs most, then add more as you grow.
+          Every package has a fixed scope and its price shown upfront. Start with what your business needs most, then add more as you grow.
         </Reveal>
       </div>
 
@@ -42,6 +42,11 @@ export default function Packages() {
                 <p className="text-[16px] leading-relaxed text-[#b5b5b5]">{p.body}</p>
               </div>
 
+              <div className="flex flex-col gap-1">
+                <div className="text-[34px] font-extrabold leading-none tracking-[-0.02em] tabular-nums">{p.price}</div>
+                <div className="text-[14px] font-semibold text-mute">{p.monthly ?? "One-time"} · {p.delivery}</div>
+              </div>
+
               <div className="flex flex-col gap-1.5 rounded-[14px] border border-line bg-black/40 px-4 py-3">
                 <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-mute">Best for</span>
                 <span className="text-[15px] font-semibold leading-snug">{p.bestFor}</span>
@@ -57,7 +62,7 @@ export default function Packages() {
               </ul>
 
               <div className="mt-auto flex items-center justify-between gap-4 pt-2">
-                <span className="text-[15px] font-semibold text-mute">{p.price ?? "Fixed price"}</span>
+                <span className="text-[13px] font-semibold text-mute">Fixed price</span>
                 <TransitionLink href="/#contact" className="inline-flex items-center gap-2 text-[15px] font-bold hover:text-red">Get started <Arrow /></TransitionLink>
               </div>
             </article>
