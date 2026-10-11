@@ -63,7 +63,7 @@ export default function Hero() {
         />
         <Reveal delay={1.05} className="relative z-10 flex flex-col justify-between gap-8 md:flex-row md:items-end lg:max-w-[56%] lg:flex-col lg:items-start">
           <p className="max-w-[580px] text-[17px] leading-relaxed text-[#b5b5b5] md:text-[21px]">
-            AI automation, SaaS tools, websites, live production and brand systems — designed, engineered and delivered by one studio.
+            AI automation, SaaS tools, websites, live production and brand systems. Designed, engineered and delivered by one studio.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Magnetic><TransitionLink href="/#contact" className="btn btn-red w-full">Start a project <Arrow /></TransitionLink></Magnetic>
@@ -88,7 +88,7 @@ export default function Hero() {
           />
           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent" />
           <div ref={caption} className="absolute inset-x-0 bottom-6 flex flex-col items-start justify-between gap-5 px-6 md:bottom-10 md:flex-row md:items-end md:px-[var(--gutter)]">
-            <p className="display max-w-[900px] text-[clamp(34px,6vw,96px)]">Ideas. Engineered. <span className="text-red">Launched.</span></p>
+            <p className="display max-w-[900px] text-[clamp(34px,6vw,96px)]">We build it, automate it and <span className="text-red">stream it live.</span></p>
             <button type="button" data-cursor="Play" onClick={() => setFilmOpen(true)}
               className="btn border border-white/40 bg-white/10 text-white backdrop-blur hover:bg-white hover:text-black">
               <svg width="12" height="12" viewBox="0 0 14 14" fill="currentColor" aria-hidden="true"><path d="M3 1.5v11l9-5.5z" /></svg>

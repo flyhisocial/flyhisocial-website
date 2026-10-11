@@ -61,7 +61,7 @@ export default function Contact() {
         {state === "sent" ? (
           <div className="flex h-full flex-col justify-center gap-4 rounded-[22px] bg-black p-10 text-white" role="status">
             <div className="text-[34px] font-extrabold tracking-[-0.02em]">Thank you.</div>
-            <p className="text-[17px] leading-relaxed text-[#b5b5b5]">We&apos;ll get back to you within one working day — usually much sooner.</p>
+            <p className="text-[17px] leading-relaxed text-[#b5b5b5]">We&apos;ll get back to you within one working day, usually much sooner.</p>
           </div>
         ) : (
           <form onSubmit={submit} className="relative flex flex-col gap-6" aria-label="Project enquiry">
@@ -90,8 +90,8 @@ export default function Contact() {
               <button type="submit" disabled={state === "sending"} className="btn btn-ink">
                 {state === "sending" ? "Sending…" : "Send enquiry"} <Arrow />
               </button>
-              {state === "error" && <span role="alert" className="text-[15px] font-semibold">Couldn&apos;t send — check your email or number, or WhatsApp us instead.</span>}
-              {state === "busy" && <span role="alert" className="text-[15px] font-semibold">Too many tries — please WhatsApp us instead.</span>}
+              {state === "error" && <span role="alert" className="text-[15px] font-semibold">Couldn&apos;t send. Check your email or number, or WhatsApp us instead.</span>}
+              {state === "busy" && <span role="alert" className="text-[15px] font-semibold">Too many tries. Please WhatsApp us instead.</span>}
             </div>
           </form>
         )}

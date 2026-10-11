@@ -274,7 +274,7 @@ export default function SolutionPage({ solution: s, parent }: { solution: Soluti
             <Reveal className="eyebrow text-mute-dark">How we work</Reveal>
             <SplitReveal className="text-[clamp(40px,5vw,76px)] font-extrabold leading-[0.98] tracking-[-0.035em]" lines={["Four steps.", "No surprises."]} />
             <Reveal as="p" className="max-w-[420px] text-[17px] leading-relaxed text-[#3d3d3d]">
-              You always know what&apos;s happening, what&apos;s next and what it costs — before any work begins.
+              You always know what&apos;s happening, what&apos;s next and what it costs, before any work begins.
             </Reveal>
           </div>
         </div>

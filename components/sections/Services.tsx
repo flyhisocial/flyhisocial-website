@@ -50,7 +50,7 @@ export default function Services() {
           <SplitReveal className="h2" lines={["Five practices.", "One team."]} />
         </div>
         <Reveal as="p" className="max-w-[440px] text-[17px] leading-relaxed text-[#b5b5b5] md:text-[19px]">
-          Most projects need more than one of these. That&apos;s the point — strategy, design, AI, engineering and production sit at the same table.
+          Most projects need more than one of these. Strategy, design, AI, engineering and production sit at the same table.
         </Reveal>
       </div>
 

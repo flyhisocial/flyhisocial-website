@@ -34,14 +34,14 @@ export const services: Service[] = [
     headline: ["Websites and apps", "that actually sell."],
     intro: [
       "Your website is often the first conversation a customer has with you. We design and build websites, web apps and mobile apps that load fast on everyday phones, explain what you do in seconds, and turn visitors into enquiries.",
-      "Every build is custom — no recycled templates — and handed over so your team can update content without calling a developer. When you need more than a website, we build full SaaS products, customer portals and internal dashboards on the same foundation.",
+      "Every build is custom, with no recycled templates, and handed over so your team can update content without calling a developer. When you need more than a website, we build full SaaS products, customer portals and internal dashboards on the same foundation.",
     ],
     deliverables: [
       { name: "Business & brand websites", body: "Premium, mobile-first sites with motion, clear messaging and enquiry flows that work." },
       { name: "Landing pages for ads", body: "Focused pages for campaigns, launches and events, built to convert paid traffic." },
       { name: "Web apps & portals", body: "Client portals, booking systems, dashboards and admin panels built around your workflow." },
       { name: "Mobile apps", body: "Android and iOS apps for customers or field teams, sharing one codebase where possible." },
-      { name: "SaaS products", body: "From idea to launched product — accounts, subscriptions, admin and analytics." },
+      { name: "SaaS products", body: "From idea to launched product, with accounts, subscriptions, admin and analytics." },
       { name: "Care & growth", body: "Hosting, updates, speed and SEO checks so the site keeps performing after launch." },
     ],
     industries: ["Healthcare & clinics", "Education & coaching", "Real estate", "Hospitality", "Startups", "Institutions & events"],
@@ -57,7 +57,7 @@ export const services: Service[] = [
       { q: "Will I be able to update the website myself?", a: "Yes. We set up simple editing for text, images, projects and blog posts, and walk your team through it at handover." },
       { q: "Is the website optimised for Google?", a: "Every site ships with fast loading, clean page structure, meta titles and descriptions, a sitemap and structured data so search engines understand your business." },
       { q: "Can you add WhatsApp and online booking?", a: "Yes. WhatsApp chat, enquiry forms that reach you instantly, and booking or payment flows are all common additions." },
-      { q: "Do you also build mobile apps and SaaS products?", a: "Yes. We build Android and iOS apps and full SaaS products — including our own, SANHEM Health." },
+      { q: "Do you also build mobile apps and SaaS products?", a: "Yes. We build Android and iOS apps and full SaaS products, including our own, SANHEM Health." },
     ],
     related: ["nature-cm-2026", "sanhem-health"],
   },
@@ -72,8 +72,8 @@ export const services: Service[] = [
       "AI automation for your brand: WhatsApp AI assistants, website chatbots, lead follow-up, content engines and custom AI tools. Built by FlyHi Social, Bhubaneswar.",
     headline: ["AI that answers,", "books and follows up."],
     intro: [
-      "Most businesses lose customers in the gaps — the WhatsApp message answered the next morning, the enquiry nobody followed up, the report someone forgot to send. We build AI assistants and automations that close those gaps, around the clock.",
-      "We start with one high-value workflow, prove it saves time or brings revenue, and grow from there. Everything connects to the tools you already use — WhatsApp, Google Sheets, your CRM, email — and a human can always step in.",
+      "Most businesses lose customers in the gaps: the WhatsApp message answered the next morning, the enquiry nobody followed up, the report someone forgot to send. We build AI assistants and automations that close those gaps, around the clock.",
+      "We start with one high-value workflow, prove it saves time or brings revenue, and grow from there. Everything connects to the tools you already use, such as WhatsApp, Google Sheets, your CRM and email, and a human can always step in.",
     ],
     deliverables: [
       { name: "WhatsApp AI assistant", body: "Answers FAQs, shares prices, books appointments and sends reminders on your WhatsApp number." },
@@ -92,11 +92,11 @@ export const services: Service[] = [
     ],
     tools: ["Claude API", "WhatsApp Business API", "n8n", "Supabase", "Google Workspace", "WATI"],
     faqs: [
-      { q: "What is a WhatsApp AI assistant?", a: "It's an AI connected to your business WhatsApp number that replies to customers instantly — answering questions, sharing details, taking bookings and sending reminders — and passes the chat to your team when needed." },
+      { q: "What is a WhatsApp AI assistant?", a: "It's an AI connected to your business WhatsApp number that replies to customers instantly. It answers questions, shares details, takes bookings and sends reminders, and passes the chat to your team when needed." },
       { q: "Can the AI reply in Hindi and Odia?", a: "Yes. Modern AI models understand and reply in Hindi and Odia as well as English, and we test replies in the languages your customers use." },
-      { q: "Will AI replace my staff?", a: "No — it takes the repetitive questions and follow-ups off their plate so they can focus on customers who need a person." },
+      { q: "Will AI replace my staff?", a: "No. It takes the repetitive questions and follow-ups off their plate so they can focus on customers who need a person." },
       { q: "Is my customer data safe?", a: "We use official business APIs, keep data in your own accounts where possible, and only give the AI the information it needs." },
-      { q: "What should we automate first?", a: "Usually the task that happens most often and costs you customers when it's slow — enquiry replies and bookings for most businesses. A free AI audit helps decide." },
+      { q: "What should we automate first?", a: "Usually the task that happens most often and costs you customers when it's slow. For most businesses, that's enquiry replies and bookings. A free AI audit helps decide." },
     ],
     related: ["sanhem-health"],
   },
@@ -108,11 +108,11 @@ export const services: Service[] = [
     num: "03",
     seoTitle: "Branding, Social Media & Digital Marketing in Odisha",
     metaDescription:
-      "Brand identity, social media management, digital marketing, video and photography by FlyHi Social — a creative technology studio in Bhubaneswar, Odisha.",
+      "Brand identity, social media management, digital marketing, video and photography by FlyHi Social, a creative technology studio in Bhubaneswar, Odisha.",
     headline: ["Brands people", "remember."],
     intro: [
-      "A strong brand makes every other thing easier — ads cost less, customers trust faster and your team knows how to talk. We create identities and campaigns that are distinctive, consistent and made for the screens your audience lives on.",
-      "From a new logo and brand system to a month of reels, we plan, design and produce in-house — strategy, design, film and social under one roof, with AI-assisted workflows that keep output high without losing your voice.",
+      "A strong brand makes everything else easier: ads cost less, customers trust faster and your team knows how to talk. We create identities and campaigns that are distinctive, consistent and made for the screens your audience lives on.",
+      "From a new logo and brand system to a month of reels, we plan, design and produce in-house. Strategy, design, film and social sit under one roof, with AI-assisted workflows that keep output high without losing your voice.",
     ],
     deliverables: [
       { name: "Brand identity", body: "Logo, colours, typography and a brand system with guidelines your team can follow." },
@@ -124,14 +124,14 @@ export const services: Service[] = [
     ],
     industries: ["Startups & D2C", "Healthcare", "Hospitality & food", "Education", "Real estate", "Events"],
     steps: [
-      { name: "Brand discovery", body: "Audience, competitors and personality — what you want people to feel and remember." },
+      { name: "Brand discovery", body: "Audience, competitors and personality: what you want people to feel and remember." },
       { name: "Identity & direction", body: "Logo, system and content direction presented as real examples." },
-      { name: "Produce", body: "Design, film, photograph and write — in a steady monthly rhythm." },
+      { name: "Produce", body: "Design, film, photograph and write in a steady monthly rhythm." },
       { name: "Measure & refine", body: "Monthly recaps of what worked, and what we'll do more of next." },
     ],
     tools: ["Figma", "Adobe Creative Cloud", "Meta Business Suite", "Google Ads", "Canva", "AI-assisted editing"],
     faqs: [
-      { q: "Do you manage social media for businesses in Bhubaneswar?", a: "Yes — planning, content creation, posting and monthly reporting for Instagram, Facebook and LinkedIn." },
+      { q: "Do you manage social media for businesses in Bhubaneswar?", a: "Yes. We handle planning, content creation, posting and monthly reporting for Instagram, Facebook and LinkedIn." },
       { q: "Can you redesign our existing logo?", a: "Yes. We can refresh an existing logo while keeping recognition, or create a new identity from scratch." },
       { q: "Do you shoot videos and reels?", a: "Yes. We script, shoot and edit reels, brand films and event videos, including motion graphics and original music." },
       { q: "Do you run paid ads?", a: "Yes, on Meta and Google, paired with landing pages built to convert and simple monthly reports." },
@@ -149,7 +149,7 @@ export const services: Service[] = [
       "Live streaming, hybrid and virtual sessions, LED wall content, event registration and event management by FlyHi Social, Bhubaneswar.",
     headline: ["The live moment,", "handled end to end."],
     intro: [
-      "Conferences, launches and ceremonies happen once — there's no second take. We run the technology that makes live moments work: streaming to YouTube and Zoom, hybrid sessions with remote speakers, LED wall content and the registration desk at the door.",
+      "Conferences, launches and ceremonies happen once. There's no second take. We run the technology that makes live moments work: streaming to YouTube and Zoom, hybrid sessions with remote speakers, LED wall content and the registration desk at the door.",
       "We've run seventeen hybrid sessions for ISACON Odisha 2026 and delivered the website, registration, social media and invitation film for a national seminar at CSIR-IMMT. One partner for the stage and the screen means fewer things fall between vendors.",
     ],
     deliverables: [
@@ -171,8 +171,8 @@ export const services: Service[] = [
     faqs: [
       { q: "Do you provide live streaming services in Bhubaneswar?", a: "Yes. We stream conferences, launches and ceremonies across Bhubaneswar and Odisha to YouTube, Facebook, Zoom or private links." },
       { q: "Can you run hybrid sessions with remote speakers?", a: "Yes. We operate Zoom and Meet sessions, test each presenter's slides beforehand, and manage timing and moderation live." },
-      { q: "Can you handle event registration too?", a: "Yes — online registration, QR passes sent by email and WhatsApp, and fast check-in with badge printing at the venue." },
-      { q: "What happens if the internet drops?", a: "We plan backups — secondary connections and local recording — so the session and the recording are protected." },
+      { q: "Can you handle event registration too?", a: "Yes. We handle online registration, QR passes sent by email and WhatsApp, and fast check-in with badge printing at the venue." },
+      { q: "What happens if the internet drops?", a: "We plan backups, including secondary connections and local recording, so the session and the recording are protected." },
     ],
     related: ["isacon-odisha-2026", "nature-cm-2026"],
   },
@@ -184,10 +184,10 @@ export const services: Service[] = [
     num: "05",
     seoTitle: "Cloud, ERP, Healthcare Technology & Marine Consultancy",
     metaDescription:
-      "Cloud and AI infrastructure, ERP solutions, healthcare technology and marine consultancy for organisations — delivered by FlyHi Social, Bhubaneswar.",
+      "Cloud and AI infrastructure, ERP solutions, healthcare technology and marine consultancy for organisations, delivered by FlyHi Social, Bhubaneswar.",
     headline: ["Systems that keep", "organisations running."],
     intro: [
-      "Growing organisations eventually outgrow spreadsheets and disconnected tools. We help plan and deliver the systems underneath — cloud infrastructure, ERP, healthcare platforms and operational tools for maritime and logistics teams.",
+      "Growing organisations eventually outgrow spreadsheets and disconnected tools. We help plan and deliver the systems underneath: cloud infrastructure, ERP, healthcare platforms and operational tools for maritime and logistics teams.",
       "We focus on practical outcomes: fewer manual steps, one source of truth, and systems your staff will actually use. AI is built in where it saves real time, not bolted on for show.",
     ],
     deliverables: [
@@ -209,7 +209,7 @@ export const services: Service[] = [
     faqs: [
       { q: "Do you work with institutions and government bodies?", a: "Yes. We've delivered work for national institutions and professional bodies, and can support procurement with the documentation it needs." },
       { q: "Can you integrate with our existing ERP?", a: "Usually, yes. We connect ERPs and other tools through their APIs or automation platforms so data flows between them." },
-      { q: "What kind of healthcare technology do you build?", a: "Appointment booking, WhatsApp confirmations and reminders, patient logs and clinic dashboards — including our own platform, SANHEM Health." },
+      { q: "What kind of healthcare technology do you build?", a: "Appointment booking, WhatsApp confirmations and reminders, patient logs and clinic dashboards, including our own platform, SANHEM Health." },
       { q: "What does marine consultancy cover?", a: "Logistics planning, fleet operations support and the systems architecture behind maritime operations." },
     ],
     related: ["sanhem-health", "isacon-odisha-2026"],

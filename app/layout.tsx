@@ -9,7 +9,7 @@ import { jsonLd as toJsonLd } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: "FlyHi Social — Creative technology studio, Bhubaneswar", template: "%s · FlyHi Social" },
+  title: { default: "FlyHi Social | Creative technology studio, Bhubaneswar", template: "%s · FlyHi Social" },
   description: site.description,
   verification: { google: "KkfutxEDFG8aKkqoubgRV4LNp8zR_7vLDQX" },
   openGraph: { type: "website", siteName: site.name, images: ["/media/hero-poster.jpg"], locale: "en_IN" },

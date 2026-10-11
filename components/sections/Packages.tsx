@@ -21,7 +21,7 @@ export default function Packages() {
           <SplitReveal className="h2" lines={["Pick a package.", <>We&apos;ll handle <span className="whitespace-nowrap text-red">the rest.</span></>]} />
         </div>
         <Reveal as="p" className="max-w-[400px] shrink-0 text-[17px] leading-relaxed text-[#b5b5b5] md:text-[19px]">
-          Ready-made solutions with a fixed scope and one clear price. Start with what your business needs most — add more as you grow.
+          Ready-made solutions with a fixed scope and one clear price. Start with what your business needs most, then add more as you grow.
         </Reveal>
       </div>
 

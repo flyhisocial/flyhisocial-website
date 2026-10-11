@@ -32,27 +32,27 @@ export const solutions: Solution[] = [
     name: "Cloud Computing & AI",
     parent: "cloud-erp-enterprise",
     scene: "cloud",
-    seoTitle: "Cloud Computing & AI Integration — AWS, Azure, Google Cloud",
+    seoTitle: "Cloud Computing & AI Integration: AWS, Azure, Google Cloud",
     metaDescription:
       "Cloud infrastructure on AWS, Azure and Google Cloud, Kubernetes and Terraform, plus practical AI integration with Gemini, ChatGPT, Claude and Copilot. FlyHi Social, Bhubaneswar.",
     headline: ["Cloud and AI,", "built to scale."],
-    lede: "Scalable cloud infrastructure and practical AI integration — from moving your first workload to running AI across your operations.",
+    lede: "Scalable cloud infrastructure and practical AI integration, from moving your first workload to running AI across your operations.",
     statement: [
-      "We design cloud foundations that stay fast, secure and affordable as you grow —",
+      "We design cloud foundations that stay fast, secure and affordable as you grow,",
       "then put AI to work on top of them, where it saves real time.",
     ],
     overview: [
-      "Cloud done well is invisible: pages load fast, releases don't cause downtime, backups exist and the monthly bill makes sense. We plan, migrate and run infrastructure on the platform that fits you — not the one we happen to prefer.",
-      "On top of that foundation we connect the AI models that suit each job — document reading, assistants, search, forecasting — with clear boundaries on what data each model can see.",
+      "Cloud done well is invisible: pages load fast, releases don't cause downtime, backups exist and the monthly bill makes sense. We plan, migrate and run infrastructure on the platform that fits you, not the one we happen to prefer.",
+      "On top of that foundation we connect the AI models that suit each job, such as document reading, assistants, search and forecasting, with clear boundaries on what data each model can see.",
     ],
     groups: [
       {
         title: "Cloud ecosystems",
         intro: "The platforms and practices we build on.",
         items: [
-          { name: "Amazon Web Services", mark: "AWS", body: "Well-architected AWS setups — compute, storage, databases and networking — with security and cost controls from day one." },
+          { name: "Amazon Web Services", mark: "AWS", body: "Well-architected AWS setups covering compute, storage, databases and networking, with security and cost controls from day one." },
           { name: "Microsoft Azure", mark: "AZ", body: "Azure environments for organisations already on Microsoft 365, with identity, access and backups done properly." },
-          { name: "Google Cloud", mark: "GCP", body: "Google Cloud for data-heavy work — BigQuery pipelines, serverless apps and analytics dashboards." },
+          { name: "Google Cloud", mark: "GCP", body: "Google Cloud for data-heavy work: BigQuery pipelines, serverless apps and analytics dashboards." },
           { name: "Kubernetes", mark: "K8s", body: "Container platforms that scale services up and down automatically, with zero-downtime releases." },
           { name: "Terraform", mark: "TF", body: "Infrastructure as code, so every environment is repeatable, reviewable and quick to rebuild." },
           { name: "Observability", icon: "pulse", body: "Monitoring, logs and alerts, so you hear about problems before your customers do." },
@@ -62,9 +62,9 @@ export const solutions: Solution[] = [
         title: "AI platforms",
         intro: "The models we integrate, matched to the task.",
         items: [
-          { name: "Gemini", mark: "GEM", body: "Google's Gemini models for multimodal work — documents, images and long reports." },
+          { name: "Gemini", mark: "GEM", body: "Google's Gemini models for multimodal work: documents, images and long reports." },
           { name: "ChatGPT", mark: "GPT", body: "OpenAI models for chat assistants, drafting and pulling structured data out of messy text." },
-          { name: "Claude", mark: "CL", body: "Anthropic's Claude for careful reasoning over long documents — and the assistants we build for clients." },
+          { name: "Claude", mark: "CL", body: "Anthropic's Claude for careful reasoning over long documents, and the assistants we build for clients." },
           { name: "Copilot", mark: "CP", body: "Microsoft Copilot rolled out across Microsoft 365, with sensible data boundaries and team training." },
           { name: "Llama (Meta AI)", mark: "LL", body: "Open models self-hosted inside your own infrastructure when data must never leave it." },
           { name: "Perplexity", mark: "PX", body: "Research assistants that answer with cited sources, for teams that need to check the facts." },
@@ -73,17 +73,17 @@ export const solutions: Solution[] = [
     ],
     steps: [
       { name: "Assess", body: "Map what you run today, what it costs and where the risks are." },
-      { name: "Architect", body: "A clear target design — platform, security, backups, budget — agreed before we build." },
+      { name: "Architect", body: "A clear target design covering platform, security, backups and budget, agreed before we build." },
       { name: "Migrate & build", body: "Move workloads in phases, automate deployments and connect the AI services." },
       { name: "Operate", body: "Monitoring, cost reviews and improvements every month." },
     ],
     featured: "sanhem-health",
     faqs: [
-      { q: "Which cloud should we choose — AWS, Azure or Google Cloud?", a: "It depends on what you already use and what you're building. Microsoft-heavy organisations often fit Azure, data and analytics work suits Google Cloud, and AWS has the broadest range of services. We recommend one after looking at your systems, skills and budget." },
-      { q: "Can you move our existing systems to the cloud?", a: "Yes. We migrate in phases — usually starting with the least risky workloads — with backups and a rollback plan at every step." },
+      { q: "Which cloud should we choose: AWS, Azure or Google Cloud?", a: "It depends on what you already use and what you're building. Microsoft-heavy organisations often fit Azure, data and analytics work suits Google Cloud, and AWS has the broadest range of services. We recommend one after looking at your systems, skills and budget." },
+      { q: "Can you move our existing systems to the cloud?", a: "Yes. We migrate in phases, usually starting with the least risky workloads, with backups and a rollback plan at every step." },
       { q: "How do you keep cloud costs under control?", a: "Right-sized servers, auto-scaling, budgets with alerts and a monthly review of what's being paid for. Most savings come from switching off what nobody uses." },
       { q: "How do you use AI with our private data?", a: "We give each AI model only the data its task needs, use business agreements that exclude your data from training, and self-host open models when data must stay in-house." },
-      { q: "Do you provide ongoing cloud support?", a: "Yes — monitoring, updates, security patches and help when something changes in your business." },
+      { q: "Do you provide ongoing cloud support?", a: "Yes. That includes monitoring, updates, security patches and help when something changes in your business." },
     ],
     desk: "cloud & AI desk",
     ctaLine: "Ready to scale?",
@@ -93,17 +93,17 @@ export const solutions: Solution[] = [
     name: "ERP Solutions",
     parent: "cloud-erp-enterprise",
     scene: "enterprise",
-    seoTitle: "ERP Solutions — SAP, Oracle, Dynamics 365, Salesforce Integration",
+    seoTitle: "ERP Solutions: SAP, Oracle, Dynamics 365, Salesforce Integration",
     metaDescription:
       "ERP planning, implementation support, customisation and integration across SAP S/4HANA, Oracle, JD Edwards, Microsoft Dynamics 365, ServiceNow and Salesforce. FlyHi Social, Bhubaneswar.",
     headline: ["One system for", "the whole business."],
     lede: "ERP planning, implementation support and integration that connect finance, inventory, sales and operations in one place.",
     statement: [
-      "Most businesses don't need more software —",
-      "they need the software they already have to talk to each other.",
+      "Most businesses don't need more software.",
+      "They need the software they already have to talk to each other.",
     ],
     overview: [
-      "When finance, stock, sales and service live in separate tools, people spend their day re-typing numbers and chasing reports. An ERP puts them on one source of truth — if it's chosen well and set up around how your business really works.",
+      "When finance, stock, sales and service live in separate tools, people spend their day re-typing numbers and chasing reports. An ERP puts them on one source of truth, if it's chosen well and set up around how your business really works.",
       "We help you pick the right platform, shape it to your processes, move your data across, and connect it to the website, WhatsApp, e-commerce and reporting tools around it.",
     ],
     groups: [
@@ -114,8 +114,8 @@ export const solutions: Solution[] = [
           { name: "SAP S/4HANA", mark: "SAP", body: "Planning, integration and reporting around SAP S/4HANA, including links to the tools your teams use every day." },
           { name: "Oracle", mark: "ORA", body: "Oracle Cloud ERP and NetSuite for finance, procurement and multi-entity operations." },
           { name: "JD Edwards", mark: "JDE", body: "Upgrades, integrations and support for existing JD Edwards installations." },
-          { name: "Microsoft Dynamics 365", mark: "D365", body: "Dynamics 365 for businesses already on Microsoft — from finance to field service." },
-          { name: "ServiceNow", mark: "SN", body: "IT and service workflows — tickets, approvals and asset tracking — in one place." },
+          { name: "Microsoft Dynamics 365", mark: "D365", body: "Dynamics 365 for businesses already on Microsoft, from finance to field service." },
+          { name: "ServiceNow", mark: "SN", body: "IT and service workflows, including tickets, approvals and asset tracking, in one place." },
           { name: "Salesforce", mark: "SF", body: "CRM that connects sales and service to your ERP, so customers and orders stay in sync." },
         ],
       },
@@ -142,7 +142,7 @@ export const solutions: Solution[] = [
       { q: "Which ERP is right for a growing Indian business?", a: "It depends on your size, industry and existing tools. Smaller businesses often do well with a cloud ERP they can grow into, while larger groups may need SAP, Oracle or Dynamics 365. We compare options against your real processes before recommending one." },
       { q: "Can you connect our ERP to our website, WhatsApp or online store?", a: "Yes. We connect ERPs to websites, e-commerce, WhatsApp and payment tools through their APIs or automation platforms, so orders and stock update without re-typing." },
       { q: "Can you move our data from spreadsheets or an older system?", a: "Yes. We clean and map customers, products, stock and history, test the import, and move it across with a rollback plan." },
-      { q: "Can you customise an ERP we already use?", a: "Usually, yes — new forms, approval flows, reports and integrations built on top of your existing system." },
+      { q: "Can you customise an ERP we already use?", a: "Usually, yes. We can add new forms, approval flows, reports and integrations on top of your existing system." },
     ],
     desk: "ERP desk",
     ctaLine: "Ready to connect the business?",
@@ -152,17 +152,17 @@ export const solutions: Solution[] = [
     name: "App & Web Development",
     parent: "web-app-development",
     scene: "build",
-    seoTitle: "Mobile App & Custom Software Development — React Native, Next.js, Node.js",
+    seoTitle: "Mobile App & Custom Software Development: React Native, Next.js, Node.js",
     metaDescription:
       "Full-stack web platforms and Android and iOS apps built with React Native, Next.js, Node.js, PostgreSQL, Supabase, Kotlin and more. Custom software by FlyHi Social, Bhubaneswar.",
     headline: ["Engineered for", "speed and scale."],
     lede: "Full-stack web platforms and mobile apps, built to perform on the phones and networks your users actually have.",
     statement: [
-      "Good software feels simple to use —",
+      "Good software feels simple to use",
       "because the hard engineering is done underneath.",
     ],
     overview: [
-      "We build web platforms, mobile apps and internal tools with a modern, proven stack — typed end to end, tested, and designed to stay fast as users and data grow.",
+      "We build web platforms, mobile apps and internal tools with a modern, proven stack that is typed end to end, tested, and designed to stay fast as users and data grow.",
       "We keep an eye on the details that decide whether an app succeeds in India: small download sizes, offline-friendly screens, quick loading on 4G and budget Android phones, and admin panels your team can run without us.",
     ],
     groups: [
@@ -175,7 +175,7 @@ export const solutions: Solution[] = [
           { name: "Node.js", mark: "JS", body: "APIs and background jobs that handle many users at once without slowing down." },
           { name: "TypeScript", mark: "TS", body: "Typed code across the whole product, so bugs are caught before users see them." },
           { name: "PostgreSQL", mark: "PG", body: "Reliable relational databases, designed with the right structure and indexes from the start." },
-          { name: "Supabase", mark: "SB", body: "Auth, database, storage and realtime in one — ideal for shipping products quickly." },
+          { name: "Supabase", mark: "SB", body: "Auth, database, storage and realtime in one, ideal for shipping products quickly." },
           { name: "GraphQL", mark: "GQL", body: "Flexible APIs that give each screen exactly the data it needs." },
           { name: "Kotlin & Jetpack Compose", mark: "KT", body: "Native Android apps and screens when an app needs the full power of the device." },
           { name: "Rust", mark: "RS", body: "High-performance services and WebAssembly modules for the heaviest workloads." },
@@ -194,10 +194,10 @@ export const solutions: Solution[] = [
     featured: "openex",
     faqs: [
       { q: "Do you build both Android and iOS apps?", a: "Yes. We usually build both from one React Native codebase, and go fully native with Kotlin or Swift when an app needs it." },
-      { q: "Which technology will you use for our project?", a: "The one that fits — most products use Next.js, Node.js and PostgreSQL or Supabase, with React Native for mobile. We explain the choice and avoid anything that locks you in." },
+      { q: "Which technology will you use for our project?", a: "The one that fits. Most products use Next.js, Node.js and PostgreSQL or Supabase, with React Native for mobile. We explain the choice and avoid anything that locks you in." },
       { q: "Will we own the source code?", a: "Yes. The code, designs and accounts are yours, and we document everything at handover." },
       { q: "Can you take over an app someone else built?", a: "Yes. We review the code first, fix what's urgent, and then improve it step by step." },
-      { q: "Do you publish apps to the Play Store and App Store?", a: "Yes — store listings, screenshots, review submission and updates after launch." },
+      { q: "Do you publish apps to the Play Store and App Store?", a: "Yes. We handle store listings, screenshots, review submission and updates after launch." },
     ],
     desk: "engineering desk",
     ctaLine: "Have an app in mind?",
@@ -207,18 +207,18 @@ export const solutions: Solution[] = [
     name: "Digital Marketing",
     parent: "branding-digital-marketing",
     scene: "growth",
-    seoTitle: "Digital Marketing Agency in Bhubaneswar — Google Ads, Meta Ads, SEO",
+    seoTitle: "Digital Marketing Agency in Bhubaneswar: Google Ads, Meta Ads, SEO",
     metaDescription:
       "Performance marketing by FlyHi Social: Google Ads, Meta ads, GA4 analytics, SEO, programmatic and marketing automation, with clear monthly reporting. Bhubaneswar, Odisha.",
     headline: ["Growth you", "can measure."],
     lede: "Data-driven marketing that grows your visibility, brings qualified leads and shows exactly what every rupee returned.",
     statement: [
-      "We don't guess what works —",
-      "we test, measure and put more budget behind what's proven.",
+      "We don't guess what works.",
+      "We test, measure and put more budget behind what's proven.",
     ],
     overview: [
       "Every campaign starts with tracking you can trust: what people clicked, what they did next and which ads led to real enquiries. Without that, marketing is just spending.",
-      "With it, we run search, social and content together — cutting what doesn't perform, doubling down on what does, and reporting every month in numbers your team understands.",
+      "With it, we run search, social and content together. We cut what doesn't perform, double down on what does, and report every month in numbers your team understands.",
     ],
     groups: [
       {
@@ -242,10 +242,10 @@ export const solutions: Solution[] = [
     ],
     featured: "nature-cm-2026",
     faqs: [
-      { q: "How much should we spend on ads each month?", a: "Enough to learn quickly what works — it depends on your market and goals. We start with a test budget, measure the cost per enquiry, and scale once the numbers are good." },
+      { q: "How much should we spend on ads each month?", a: "Enough to learn quickly what works, which depends on your market and goals. We start with a test budget, measure the cost per enquiry, and scale once the numbers are good." },
       { q: "Do you run Google Ads and Instagram ads in Bhubaneswar?", a: "Yes. We run Google, Facebook and Instagram campaigns for businesses across Bhubaneswar and Odisha, including local targeting and WhatsApp lead campaigns." },
       { q: "How long does SEO take to work?", a: "SEO builds over months rather than days. Technical and local fixes often help first; content and authority keep compounding after that." },
-      { q: "What will your monthly report show?", a: "Spend, leads, cost per lead, what changed and what we'll do next — in plain language, with the numbers behind it." },
+      { q: "What will your monthly report show?", a: "Spend, leads, cost per lead, what changed and what we'll do next, in plain language with the numbers behind it." },
     ],
     desk: "growth desk",
     ctaLine: "Ready to grow?",
@@ -255,18 +255,18 @@ export const solutions: Solution[] = [
     name: "Event Management",
     parent: "live-streaming-event-technology",
     scene: "broadcast",
-    seoTitle: "Event Management Company in Bhubaneswar — Conferences, Summits, Launches",
+    seoTitle: "Event Management Company in Bhubaneswar: Conferences, Summits, Launches",
     metaDescription:
-      "End-to-end event management for conferences, corporate summits, product launches and brand activations — hybrid streaming, AV, logistics and registration. FlyHi Social, Bhubaneswar.",
+      "End-to-end event management for conferences, corporate summits, product launches and brand activations, with hybrid streaming, AV, logistics and registration. FlyHi Social, Bhubaneswar.",
     headline: ["Events that run", "like clockwork."],
     lede: "End-to-end planning and execution for conferences, corporate summits, product launches and brand activations.",
     statement: [
-      "Behind every smooth event is a plan for everything that could go wrong —",
+      "Behind every smooth event is a plan for everything that could go wrong",
       "and a team that has already rehearsed it.",
     ],
     overview: [
       "We plan and run events from the first brief to the final report: venue layout, stage and AV, speaker schedules, registration, live streaming and the people on the ground who keep it all on time.",
-      "Because we also build the technology — event websites, registration, streaming and screen content — there's one team accountable for the stage and the screen.",
+      "Because we also build the technology (event websites, registration, streaming and screen content), one team is accountable for the stage and the screen.",
     ],
     groups: [
       {
@@ -290,8 +290,8 @@ export const solutions: Solution[] = [
     ],
     featured: "isacon-odisha-2026",
     faqs: [
-      { q: "What kinds of events do you manage?", a: "Medical and academic conferences, corporate summits, product launches, exhibitions and brand activations — in person, hybrid or online." },
-      { q: "Do you handle registration and delegate check-in?", a: "Yes — online registration, QR passes by email and WhatsApp, fast venue check-in, badge printing and live attendance numbers." },
+      { q: "What kinds of events do you manage?", a: "Medical and academic conferences, corporate summits, product launches, exhibitions and brand activations, in person, hybrid or online." },
+      { q: "Do you handle registration and delegate check-in?", a: "Yes. We handle online registration, QR passes by email and WhatsApp, fast venue check-in, badge printing and live attendance numbers." },
       { q: "Can you stream our event to remote attendees?", a: "Yes. We run multi-camera streams to YouTube, Zoom or private links, and bring remote speakers into the room." },
       { q: "Do you work outside Bhubaneswar?", a: "Yes. We're based in Bhubaneswar and work across Odisha and other cities in India." },
     ],
@@ -303,18 +303,18 @@ export const solutions: Solution[] = [
     name: "Marine Consultancy",
     parent: "cloud-erp-enterprise",
     scene: "marine",
-    seoTitle: "Marine Consultancy — Chartering, Ship Sale & Purchase, Technical Audits",
+    seoTitle: "Marine Consultancy: Chartering, Ship Sale & Purchase, Technical Audits",
     metaDescription:
       "Maritime advisory for shipowners, charterers and operators: chartering and brokerage, sale and purchase, technical audits, market intelligence, offshore support and CII/EEXI compliance.",
     headline: ["Navigating", "maritime operations."],
-    lede: "Advisory for vessel operations, chartering, compliance and offshore logistics — backed by data and technology.",
+    lede: "Advisory for vessel operations, chartering, compliance and offshore logistics, backed by data and technology.",
     statement: [
-      "Shipping decisions are expensive to get wrong —",
+      "Shipping decisions are expensive to get wrong,",
       "so we bring market data, technical checks and clear advice to each one.",
     ],
     overview: [
       "We advise shipowners, charterers and operators on the decisions that move the numbers: which cargo to fix, which vessel to buy or sell, how a ship is really performing and what regulation will ask of it next.",
-      "Our technology practice adds what most advisors can't — dashboards, tracking and systems that turn scattered voyage and fleet data into decisions.",
+      "Our technology practice adds what most advisors can't: dashboards, tracking and systems that turn scattered voyage and fleet data into decisions.",
     ],
     groups: [
       {
@@ -338,9 +338,9 @@ export const solutions: Solution[] = [
     ],
     faqs: [
       { q: "What does your marine consultancy cover?", a: "Chartering and brokerage support, ship sale and purchase, technical audits, market intelligence, offshore project support and environmental compliance such as CII and EEXI." },
-      { q: "Can you help us prepare for CII and EEXI requirements?", a: "Yes. We review a vessel's current rating, explain what's driving it and outline practical options — operational, technical and fuel-related — to improve it." },
+      { q: "Can you help us prepare for CII and EEXI requirements?", a: "Yes. We review a vessel's current rating, explain what's driving it and outline practical options to improve it, whether operational, technical or fuel-related." },
       { q: "Do you also build software for maritime operations?", a: "Yes. Through our technology practice we build fleet dashboards, tracking tools and systems that bring voyage and vessel data together." },
-      { q: "Do you work with owners and operators outside India?", a: "Yes — shipping is global, and we work with clients remotely across regions." },
+      { q: "Do you work with owners and operators outside India?", a: "Yes. Shipping is global, and we work with clients remotely across regions." },
     ],
     desk: "marine desk",
     ctaLine: "Facing a maritime decision?",
