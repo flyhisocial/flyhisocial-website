@@ -31,7 +31,7 @@ export default function About() {
       <ScrubWords
         className="text-[30px] font-semibold leading-[1.14] tracking-[-0.025em] md:col-span-9 md:text-[clamp(36px,3.8vw,56px)]"
         text="FlyHi Social is a creative technology studio in Bhubaneswar."
-        muted="We design, engineer, automate and broadcast — so the website, the AI, the brand and the live moment all come from one team."
+        muted="We design, engineer, automate and broadcast, so the website, the AI, the brand and the live moment all come from one team."
       />
     </section>
   );

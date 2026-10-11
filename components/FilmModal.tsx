@@ -28,7 +28,7 @@ export default function FilmModal({ open, onClose }: { open: boolean; onClose: (
         <video key={portrait ? "v" : "h"} className="h-full w-full"
           src={portrait ? "/media/showreel-9x16.mp4" : "/media/showreel-16x9.mp4"}
           poster={portrait ? "/media/showreel-poster-9x16.jpg" : "/media/showreel-poster.jpg"}
-          controls autoPlay playsInline aria-label="FlyHi Social motion reel 2026 — our five practices and twenty services" />
+          controls autoPlay playsInline aria-label="FlyHi Social motion reel 2026: our five practices and twenty services" />
       </div>
       <button ref={closeBtn} type="button" aria-label="Close showreel" onClick={onClose}
         className="absolute right-5 top-5 flex h-12 w-12 items-center justify-center rounded-full bg-white text-black md:right-12 md:top-10">

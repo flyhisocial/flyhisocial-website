@@ -9,7 +9,7 @@ import { gsap, prefersReducedMotion, scrubAmt } from "@/lib/motion";
 type Msg = { from: "user" | "ai" | "sys"; text: string };
 const CHAT: Msg[] = [
   { from: "user", text: "Hi, is Dr. Mishra available tomorrow?" },
-  { from: "ai", text: "Yes — Dr. Mishra has 10:30 am and 4:00 pm free tomorrow. Which suits you?" },
+  { from: "ai", text: "Yes, Dr. Mishra has 10:30 am and 4:00 pm free tomorrow. Which suits you?" },
   { from: "user", text: "4 pm please" },
   { from: "ai", text: "Booked for 4:00 pm. I'll remind you at 3 pm. Reply 1 to reschedule." },
   { from: "sys", text: "Lead saved to CRM · Reminder scheduled · Clinic notified" },
@@ -53,7 +53,7 @@ export default function AIAutomation() {
           <Reveal className="eyebrow text-mute">AI &amp; Automation</Reveal>
           <SplitReveal className="h2 max-w-[1100px]" lines={["AI that works", <>while you <span className="text-red">sleep.</span></>]} />
           <Reveal as="p" className="max-w-[640px] text-[17px] leading-relaxed text-[#b5b5b5] md:text-[20px]">
-            Automation solutions for your brand — assistants that answer and book, workflows that follow up, and custom SaaS tools built around how you work.
+            Automation solutions for your brand: assistants that answer and book, workflows that follow up, and custom SaaS tools built around how you work.
           </Reveal>
         </div>
 

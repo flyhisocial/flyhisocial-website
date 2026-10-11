@@ -5,7 +5,7 @@ export const site = {
   url: "https://flyhisocial.com",
   tagline: "We build brands, products & broadcasts.",
   description:
-    "FlyHi Social is a creative technology studio in Bhubaneswar, Odisha — AI automation, SaaS tools, websites, brand identity, live streaming and event technology from one team.",
+    "FlyHi Social is a creative technology studio in Bhubaneswar, Odisha. One team for AI automation, SaaS tools, websites, brand identity, live streaming and event technology.",
   email: "flyhisocials@gmail.com",
   // Calls go to one number, WhatsApp to another.
   phoneDisplay: "+91 9090031316",
@@ -77,7 +77,7 @@ export const practices: Practice[] = [
     name: "AI & Automation",
     cta: "Explore AI automation",
     href: "/services/ai-automation",
-    blurb: "AI that answers, books, follows up and reports — so your team doesn't have to.",
+    blurb: "AI that answers, books, follows up and reports, so your team doesn't have to.",
     items: ["WhatsApp & web AI assistants", "Workflow automation", "AI content engines", "Custom AI tools"],
   },
   {
@@ -93,7 +93,7 @@ export const practices: Practice[] = [
     name: "Broadcast & Events",
     cta: "Explore live & event tech",
     href: "/services/live-streaming-event-technology",
-    blurb: "The live moment, run end to end — on stage and on screen.",
+    blurb: "We run the live moment end to end, on stage and on screen.",
     items: ["Live streaming", "Hybrid & virtual sessions", "LED wall & event tech", "Event management"],
   },
   {
@@ -146,7 +146,7 @@ export const projects: Project[] = [
     cover: "NATURE‑CM",
     coverSub: "14–16 NOV 2026 · BHUBANESWAR",
     challenge:
-      "A national seminar needed one partner to carry it from announcement to the event itself — online presence, registrations and the story told on social.",
+      "A national seminar needed one partner to carry it from announcement to the event itself: online presence, registrations and the story told on social.",
     work: [
       "Designed and built naturecm.org",
       "Set up registration for delegates",
@@ -160,7 +160,7 @@ export const projects: Project[] = [
     year: "2026",
     kicker: "53rd annual conference · ISA Kataka City Branch",
     summary:
-      "Seventeen hybrid sessions run end to end — speaker checks, live session timers and Zoom operations — plus LED-wall output at the venue.",
+      "Seventeen hybrid sessions run end to end, with speaker checks, live session timers and Zoom operations, plus LED-wall output at the venue.",
     tags: "Broadcast · Events",
     practices: ["Broadcast & Events"],
     stats: [
@@ -211,7 +211,7 @@ export const projects: Project[] = [
     name: "OpenEX",
     year: "2026",
     kicker: "Launch film · Local marketplace app",
-    summary: "A 35-second product film in two formats — narration, original score and a vector rebuild of the app UI.",
+    summary: "A 35-second product film in two formats, with narration, original score and a vector rebuild of the app UI.",
     tags: "Brand · Film",
     practices: ["Brand"],
     stats: [
@@ -242,7 +242,7 @@ export const packages: Package[] = [
   {
     name: "WhatsApp AI Assistant",
     bestFor: "Clinics, salons, coaching centres, service businesses", hot: true,
-    body: "An assistant on your WhatsApp number that answers questions, takes bookings and follows up — 24/7.",
+    body: "An assistant on your WhatsApp number that answers questions, takes bookings and follows up, 24/7.",
     includes: ["Trained on your services, prices & FAQs", "Bookings with reminders", "Hands over to a human when needed", "Weekly conversation report"],
   },
   {
@@ -254,7 +254,7 @@ export const packages: Package[] = [
   {
     name: "Lead Autopilot",
     bestFor: "Businesses running ads or getting enquiries from many places",
-    body: "Every enquiry from your website, ads and Instagram in one place — replied to in minutes, not days.",
+    body: "Every enquiry from your website, ads and Instagram in one place, answered in minutes instead of days.",
     includes: ["All lead sources into one sheet or CRM", "Instant WhatsApp & email replies", "Follow-up reminders for your team", "Monthly lead report"],
   },
   {
@@ -275,7 +275,7 @@ export const process = [
 /* AI & Automation — what a brand can switch on. */
 export type Solution = { name: string; body: string; tags: string[] };
 export const aiSolutions: Solution[] = [
-  { name: "WhatsApp AI assistant", body: "Answers customers, takes bookings and sends reminders on WhatsApp — day and night, in English, Hindi or Odia.", tags: ["Bookings", "Support", "Reminders"] },
+  { name: "WhatsApp AI assistant", body: "Answers customers, takes bookings and sends reminders on WhatsApp, day and night, in English, Hindi or Odia.", tags: ["Bookings", "Support", "Reminders"] },
   { name: "Website AI chat", body: "A chat assistant trained on your services, prices and FAQs that turns visitors into enquiries.", tags: ["Lead capture", "FAQs"] },
   { name: "Lead follow-up autopilot", body: "Every enquiry from your site, ads or Instagram lands in one place and gets a reply in minutes, not days.", tags: ["CRM", "n8n", "Email"] },
   { name: "AI content engine", body: "Turns one video or blog into a week of posts, captions and reels ideas in your brand voice.", tags: ["Social", "Repurposing"] },

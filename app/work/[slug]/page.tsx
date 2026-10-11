@@ -34,7 +34,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const jsonLd = [
     {
       "@context": "https://schema.org", "@type": "CreativeWork", "@id": `${url}#work`, name: p.name, url,
-      headline: `${p.name} — ${p.kicker}`, description: p.summary, abstract: p.challenge,
+      headline: `${p.name}: ${p.kicker}`, description: p.summary, abstract: p.challenge,
       dateCreated: p.year, keywords: p.practices.join(", "),
       creator: { "@id": `${site.url}/#organization` }, publisher: { "@id": `${site.url}/#organization` },
       ...(p.image ? { image: `${site.url}${p.image}` } : {}),
