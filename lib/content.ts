@@ -56,6 +56,10 @@ export const homeFaqs: { q: string; a: string }[] = [
     a: "A five-page Launch Website starts at ₹24,999. Larger websites, web apps and mobile apps are quoted after a short call, with a fixed scope and one clear price agreed before work starts. We take 50% to start and 50% on handover.",
   },
   {
+    q: "Our website copy was written with ChatGPT. Can you make it sound human?",
+    a: "Yes. Our AI Copy Clean-up finds the patterns that make text read as machine-written, such as em dashes, formula slogans and template layouts, and rewrites up to five pages in your own voice. It costs ₹4,999 and takes about three working days. We used it on our own site first.",
+  },
+  {
     q: "How do I contact FlyHi Social?",
     a: "Call +91 9090031316, WhatsApp +91 7978559950 or email flyhisocials@gmail.com.",
   },
