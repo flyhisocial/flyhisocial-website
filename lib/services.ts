@@ -30,7 +30,7 @@ export const services: Service[] = [
     num: "01",
     seoTitle: "Website & App Development in Bhubaneswar",
     metaDescription:
-      "Premium websites, web apps, mobile apps and SaaS products built by FlyHi Social in Bhubaneswar, Odisha. Fast on every phone, easy to update, built to bring enquiries.",
+      "Websites, web apps, mobile apps and SaaS built by FlyHi Social in Bhubaneswar, Odisha. Fast on every phone, easy to update, made to bring enquiries.",
     headline: ["Websites and apps", "that actually sell."],
     intro: [
       "Your website is often the first conversation a customer has with you. We design and build websites, web apps and mobile apps that load fast on everyday phones, explain what you do in seconds, and turn visitors into enquiries.",
@@ -68,7 +68,7 @@ export const services: Service[] = [
     kind: "ai",
     practice: "AI & Automation",
     num: "02",
-    seoTitle: "AI Automation & WhatsApp AI Assistants for Businesses",
+    seoTitle: "AI Automation & WhatsApp AI Assistants",
     metaDescription:
       "AI automation for your brand: WhatsApp AI assistants, website chatbots, lead follow-up, content engines and custom AI tools. Built by FlyHi Social, Bhubaneswar.",
     headline: ["AI that answers,", "books and follows up."],
@@ -107,7 +107,7 @@ export const services: Service[] = [
     kind: "brand",
     practice: "Brand",
     num: "03",
-    seoTitle: "Branding, Social Media & Digital Marketing in Odisha",
+    seoTitle: "Branding & Social Media Marketing, Odisha",
     metaDescription:
       "Brand identity, social media management, digital marketing, video and photography by FlyHi Social, a creative technology studio in Bhubaneswar, Odisha.",
     headline: ["Brands people", "remember."],
@@ -145,7 +145,7 @@ export const services: Service[] = [
     kind: "broadcast",
     practice: "Broadcast & Events",
     num: "04",
-    seoTitle: "Live Streaming, Hybrid Events & Event Technology in Odisha",
+    seoTitle: "Live Streaming & Event Technology, Odisha",
     metaDescription:
       "Live streaming, hybrid and virtual sessions, LED wall content, event registration and event management by FlyHi Social, Bhubaneswar.",
     headline: ["The live moment,", "handled end to end."],
@@ -183,7 +183,7 @@ export const services: Service[] = [
     kind: "enterprise",
     practice: "Enterprise",
     num: "05",
-    seoTitle: "Cloud, ERP, Healthcare Technology & Marine Consultancy",
+    seoTitle: "Cloud, ERP, Healthcare & Marine Services",
     metaDescription:
       "Cloud and AI infrastructure, ERP solutions, healthcare technology and marine consultancy for organisations, delivered by FlyHi Social, Bhubaneswar.",
     headline: ["Systems that keep", "organisations running."],

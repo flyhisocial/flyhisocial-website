@@ -5,7 +5,7 @@ export const site = {
   url: "https://flyhisocial.com",
   tagline: "We build brands, products & broadcasts.",
   description:
-    "FlyHi Social is a creative technology studio in Bhubaneswar, Odisha. One team for AI automation, SaaS tools, websites, brand identity, live streaming and event technology.",
+    "FlyHi Social is a creative technology studio in Bhubaneswar, Odisha: AI automation, SaaS tools, websites, brand identity, live streaming and event technology.",
   email: "flyhisocials@gmail.com",
   // Calls go to one number, WhatsApp to another.
   phoneDisplay: "+91 9090031316",

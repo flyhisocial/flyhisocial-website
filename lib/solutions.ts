@@ -32,9 +32,9 @@ export const solutions: Solution[] = [
     name: "Cloud Computing & AI",
     parent: "cloud-erp-enterprise",
     scene: "cloud",
-    seoTitle: "Cloud Computing & AI Integration: AWS, Azure, Google Cloud",
+    seoTitle: "Cloud & AI Integration: AWS, Azure, GCP",
     metaDescription:
-      "Cloud infrastructure on AWS, Azure and Google Cloud, Kubernetes and Terraform, plus practical AI integration with Gemini, ChatGPT, Claude and Copilot. FlyHi Social, Bhubaneswar.",
+      "Cloud infrastructure on AWS, Azure and Google Cloud, plus practical AI integration with Gemini, ChatGPT, Claude and Copilot. FlyHi Social, Bhubaneswar.",
     headline: ["Cloud and AI,", "built to scale."],
     lede: "Scalable cloud infrastructure and practical AI integration, from moving your first workload to running AI across your operations.",
     statement: [
@@ -93,9 +93,9 @@ export const solutions: Solution[] = [
     name: "ERP Solutions",
     parent: "cloud-erp-enterprise",
     scene: "enterprise",
-    seoTitle: "ERP Solutions: SAP, Oracle, Dynamics 365, Salesforce Integration",
+    seoTitle: "ERP Solutions: SAP, Oracle, Dynamics 365",
     metaDescription:
-      "ERP planning, implementation support, customisation and integration across SAP S/4HANA, Oracle, JD Edwards, Microsoft Dynamics 365, ServiceNow and Salesforce. FlyHi Social, Bhubaneswar.",
+      "ERP planning, implementation support and integration for SAP S/4HANA, Oracle, Dynamics 365, ServiceNow and Salesforce. FlyHi Social, Bhubaneswar.",
     headline: ["One system for", "the whole business."],
     lede: "ERP planning, implementation support and integration that connect finance, inventory, sales and operations in one place.",
     statement: [
@@ -152,9 +152,9 @@ export const solutions: Solution[] = [
     name: "App & Web Development",
     parent: "web-app-development",
     scene: "build",
-    seoTitle: "Mobile App & Custom Software Development: React Native, Next.js, Node.js",
+    seoTitle: "Mobile App & Custom Software Development",
     metaDescription:
-      "Full-stack web platforms and Android and iOS apps built with React Native, Next.js, Node.js, PostgreSQL, Supabase, Kotlin and more. Custom software by FlyHi Social, Bhubaneswar.",
+      "Android and iOS apps and web platforms built with React Native, Next.js, Node.js and Supabase. Custom software by FlyHi Social, Bhubaneswar.",
     headline: ["Engineered for", "speed and scale."],
     lede: "Full-stack web platforms and mobile apps, built to perform on the phones and networks your users actually have.",
     statement: [
@@ -207,9 +207,9 @@ export const solutions: Solution[] = [
     name: "Digital Marketing",
     parent: "branding-digital-marketing",
     scene: "growth",
-    seoTitle: "Digital Marketing Agency in Bhubaneswar: Google Ads, Meta Ads, SEO",
+    seoTitle: "Digital Marketing Agency in Bhubaneswar",
     metaDescription:
-      "Performance marketing by FlyHi Social: Google Ads, Meta ads, GA4 analytics, SEO, programmatic and marketing automation, with clear monthly reporting. Bhubaneswar, Odisha.",
+      "Google Ads, Meta ads, SEO, GA4 analytics and marketing automation, with clear monthly reports. Digital marketing by FlyHi Social, Bhubaneswar.",
     headline: ["Growth you", "can measure."],
     lede: "Data-driven marketing that grows your visibility, brings qualified leads and shows exactly what every rupee returned.",
     statement: [
@@ -255,9 +255,9 @@ export const solutions: Solution[] = [
     name: "Event Management",
     parent: "live-streaming-event-technology",
     scene: "broadcast",
-    seoTitle: "Event Management Company in Bhubaneswar: Conferences, Summits, Launches",
+    seoTitle: "Event Management Company in Bhubaneswar",
     metaDescription:
-      "End-to-end event management for conferences, corporate summits, product launches and brand activations, with hybrid streaming, AV, logistics and registration. FlyHi Social, Bhubaneswar.",
+      "Event management for conferences, summits and product launches, with hybrid streaming, AV, logistics and registration. FlyHi Social, Bhubaneswar.",
     headline: ["Events that run", "like clockwork."],
     lede: "End-to-end planning and execution for conferences, corporate summits, product launches and brand activations.",
     statement: [
@@ -303,9 +303,9 @@ export const solutions: Solution[] = [
     name: "Marine Consultancy",
     parent: "cloud-erp-enterprise",
     scene: "marine",
-    seoTitle: "Marine Consultancy: Chartering, Ship Sale & Purchase, Technical Audits",
+    seoTitle: "Marine Consultancy & Ship Chartering",
     metaDescription:
-      "Maritime advisory for shipowners, charterers and operators: chartering and brokerage, sale and purchase, technical audits, market intelligence, offshore support and CII/EEXI compliance.",
+      "Maritime advisory for shipowners, charterers and operators: chartering, sale and purchase, technical audits, offshore support and CII/EEXI compliance.",
     headline: ["Navigating", "maritime operations."],
     lede: "Advisory for vessel operations, chartering, compliance and offshore logistics, backed by data and technology.",
     statement: [
