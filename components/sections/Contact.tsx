@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { site } from "@/lib/content";
 import { SplitReveal, Reveal, Magnetic, Arrow } from "../effects";
+import SocialLinks from "../SocialLinks";
 
 // Enquiries go to our own /api/contact route, which validates, rate-limits and forwards
 // to n8n server-side. If the webhook isn't configured yet, we fall back to the mail app.
@@ -49,6 +50,10 @@ export default function Contact() {
           <a href={`mailto:${site.email}`} className="hover:underline">{site.email}</a><br />
           Call <a href={`tel:${site.phoneE164}`} className="hover:underline">{site.phoneDisplay}</a><br />
           WhatsApp <a href={site.whatsapp} className="hover:underline">{site.whatsappDisplay}</a>
+        </div>
+        <div className="flex flex-col gap-3">
+          <div className="text-[14px] font-bold uppercase tracking-[0.16em]">See our work</div>
+          <SocialLinks />
         </div>
       </div>
 
