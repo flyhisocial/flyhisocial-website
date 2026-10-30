@@ -294,8 +294,9 @@ export const aiSolutions: Solution[] = [
 export type Product = { name: string; status: string; body: string; url?: string };
 export const saasProducts: Product[] = [
   { name: "SANHEM Health", status: "Live", body: "AI-guided doctor discovery and booking with WhatsApp confirmations.", url: "https://sanhemhealth.com" },
+  { name: "Event Desk", status: "Live", body: "Event registration, QR passes, venue check-in, badge printing and meal claims.", url: "https://events.flyhisocial.com" },
+  { name: "FaceFind", status: "Live", body: "Guests take one selfie and find every event photo they're in, from an album a studio scans once.", url: "https://facefind.flyhisocial.com" },
   { name: "NexusFlow Marketing OS", status: "Built", body: "Plan, publish and track social media across Instagram, Facebook, X and YouTube from one screen." },
-  { name: "Delegate Desk", status: "In development", body: "Event registration, QR passes, venue check-in, badge printing and meal claims." },
 ];
 
 export const marquee = [

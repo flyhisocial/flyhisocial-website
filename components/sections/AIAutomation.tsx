@@ -117,7 +117,7 @@ export default function AIAutomation() {
             </div>
             <Magnetic><TransitionLink href="/#contact" className="btn btn-ghost">Build a SaaS with us <Arrow /></TransitionLink></Magnetic>
           </div>
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
             {saasProducts.map((p, i) => (
               <Reveal key={p.name} delay={i * 0.08}>
                 <article onPointerMove={spot}
