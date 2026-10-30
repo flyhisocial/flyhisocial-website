@@ -1,4 +1,4 @@
-import { homeFaqs, projects, site } from "@/lib/content";
+import { homeFaqs, projects, saasProducts, site } from "@/lib/content";
 import { services } from "@/lib/services";
 import { solutions } from "@/lib/solutions";
 
@@ -23,6 +23,9 @@ export function GET() {
     "",
     "## Solutions",
     ...solutions.map((s) => `- [${s.seoTitle}](${site.url}/services/${s.slug}): ${s.metaDescription}`),
+    "",
+    "## Products",
+    ...saasProducts.map((p) => (p.url ? `- [${p.name}](${p.url}): ${p.body}` : `- ${p.name} (${p.status.toLowerCase()}): ${p.body}`)),
     "",
     "## Free tools",
     `- [Free AI Copy Checker](${site.url}/check): scores how AI-written a web page sounds and quotes the lines that give it away.`,

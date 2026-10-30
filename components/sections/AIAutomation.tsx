@@ -109,7 +109,7 @@ export default function AIAutomation() {
           </div>
         </div>
 
-        <div className="mt-24 flex flex-col gap-8 md:mt-32">
+        <div id="products" className="mt-24 flex flex-col gap-8 md:mt-32">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="flex flex-col gap-5">
               <Reveal className="eyebrow text-mute">Our own SaaS</Reveal>
@@ -117,7 +117,7 @@ export default function AIAutomation() {
             </div>
             <Magnetic><TransitionLink href="/#contact" className="btn btn-ghost">Build a SaaS with us <Arrow /></TransitionLink></Magnetic>
           </div>
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
             {saasProducts.map((p, i) => (
               <Reveal key={p.name} delay={i * 0.08}>
                 <article onPointerMove={spot}
