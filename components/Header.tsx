@@ -6,7 +6,7 @@ import TransitionLink from "./TransitionLink";
 import { Wordmark } from "./Brand";
 import { Arrow, Magnetic } from "./effects";
 import { gsap, getLenis, prefersReducedMotion } from "@/lib/motion";
-import { practices } from "@/lib/content";
+import { practices, saasProducts } from "@/lib/content";
 import { solutions } from "@/lib/solutions";
 import { services } from "@/lib/services";
 
@@ -14,6 +14,7 @@ const NAV = [
   { href: "/#work", label: "Work" },
   { href: "/#services", label: "Services" },
   { href: "/#ai", label: "AI" },
+  { href: "/#products", label: "Products" },
   { href: "/#packages", label: "Packages" },
   { href: "/check", label: "AI check" },
   { href: "/#about", label: "About" },
@@ -156,7 +157,17 @@ export default function Header() {
               ))}
             </ul>
           </div>
-          <TransitionLink href="/#contact" onClick={() => setOpen(false)} className="btn btn-red mt-auto w-full">Talk to an expert <Arrow /></TransitionLink>
+          <div className="mt-6 flex flex-col gap-3 border-t border-[#1e1e1e] pt-6">
+            <span className="text-[12px] font-bold tracking-[0.16em] text-mute">PRODUCTS</span>
+            <ul className="grid grid-cols-2 gap-x-4 gap-y-3 text-[15px] font-semibold text-[#d0d0d0]">
+              {saasProducts.filter((p) => p.url).map((p) => (
+                <li key={p.name}><a href={p.url} target="_blank" rel="noopener noreferrer" className="hover:text-red">{p.name} ↗</a></li>
+              ))}
+            </ul>
+          </div>
+          <div className="mt-auto pt-8">
+            <TransitionLink href="/#contact" onClick={() => setOpen(false)} className="btn btn-red w-full">Talk to an expert <Arrow /></TransitionLink>
+          </div>
         </div>
       )}
     </>

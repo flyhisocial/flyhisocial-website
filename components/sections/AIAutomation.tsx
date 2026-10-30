@@ -109,7 +109,7 @@ export default function AIAutomation() {
           </div>
         </div>
 
-        <div className="mt-24 flex flex-col gap-8 md:mt-32">
+        <div id="products" className="mt-24 flex flex-col gap-8 md:mt-32">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div className="flex flex-col gap-5">
               <Reveal className="eyebrow text-mute">Our own SaaS</Reveal>
