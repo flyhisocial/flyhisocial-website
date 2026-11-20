@@ -4,7 +4,6 @@ import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
 import Work from "@/components/sections/Work";
 import AIAutomation from "@/components/sections/AIAutomation";
-import SportsLive from "@/components/sections/SportsLive";
 import Process from "@/components/sections/Process";
 import Packages from "@/components/sections/Packages";
 import Contact from "@/components/sections/Contact";
@@ -30,7 +29,6 @@ export default function Home() {
       <Services />
       <Work />
       <AIAutomation />
-      <SportsLive />
       <Process />
       <Packages />
       <Faqs faqs={homeFaqs} id="faq-home" />
