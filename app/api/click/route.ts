@@ -6,8 +6,8 @@ import { NextResponse, type NextRequest } from "next/server";
 const SUPABASE_URL = "https://ctocstcndzasusicazzy.supabase.co";
 const SUPABASE_KEY = "sb_publishable_4DwFotfLWPPD7B38iOE91w_1FvH9K8t";
 
-const LINKS = new Set(["whatsapp", "call", "website", "email", "instagram", "linkedin", "facebook", "youtube", "directions", "review", "save_contact", "event_desk", "facefind", "cricket_live", "page_view"]);
-const SOURCES = new Set(["qr", "instagram", "card", "invoice", "direct", "other"]);
+const LINKS = new Set(["whatsapp", "call", "website", "email", "instagram", "linkedin", "facebook", "youtube", "directions", "review", "save_contact", "event_desk", "facefind", "cricket_live", "sports_live", "page_view"]);
+const SOURCES = new Set(["qr", "instagram", "card", "invoice", "direct", "other", "stream"]);
 
 export async function POST(req: NextRequest) {
   const origin = req.headers.get("origin");

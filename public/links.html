@@ -115,7 +115,7 @@
     <li><a data-k="facefind" href="https://facefind.flyhisocial.com" target="_blank" rel="noopener">
       <svg class="ic" viewBox="0 0 24 24"><path d="M3 3h5v2H5v3H3V3zm13 0h5v5h-2V5h-3V3zM3 16h2v3h3v2H3v-5zm16 3v-3h2v5h-5v-2h3zM12 7a3 3 0 1 1 0 6 3 3 0 0 1 0-6zm-5 10c0-2.2 2.2-3.5 5-3.5s5 1.3 5 3.5v.5H7V17z"/></svg>
       <span class="tx"><span class="t">FaceFind</span><span class="d">One selfie finds every event photo you're in</span></span><span class="ar">›</span></a></li>
-    <li><a data-k="cricket_live" href="https://sports.flyhisocial.com" target="_blank" rel="noopener">
+    <li><a data-k="sports_live" href="https://sports.flyhisocial.com" target="_blank" rel="noopener">
       <svg class="ic" viewBox="0 0 24 24"><path d="M15.5 2.5l2 2-9.8 9.8-2-2 9.8-9.8zM5 13.5l2 2-3 3a1.4 1.4 0 0 1-2-2l3-3zM18 14a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7z"/></svg>
       <span class="tx"><span class="t">FlyHi Sports Live</span><span class="d">Live scoring and stream graphics for cricket, football, kabaddi and more</span></span><span class="ar">›</span></a></li>
   </ul>
@@ -161,7 +161,7 @@ document.getElementById('save').addEventListener('click', function () {
 <script>
 {
   var q = new URLSearchParams(location.search).get('s');
-  var ok = ['qr','card','invoice','instagram'];
+  var ok = ['qr','card','invoice','instagram','stream'];
   var src = ok.indexOf(q) > -1 ? q : (/instagram/i.test(document.referrer) ? 'instagram' : (document.referrer ? 'other' : 'direct'));
   var send = function (link) {
     var data = JSON.stringify({ link: link, source: src });
