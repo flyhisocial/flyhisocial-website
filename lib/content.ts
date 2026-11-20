@@ -48,6 +48,10 @@ export const homeFaqs: { q: string; a: string }[] = [
     a: "Yes. We stream conferences, launches and ceremonies to YouTube, Facebook, Zoom or private links, and run hybrid sessions with remote speakers. For ISACON Odisha 2026 we ran seventeen hybrid sessions.",
   },
   {
+    q: "Can you score a cricket, football or kabaddi match and show live graphics on our stream?",
+    a: "Yes. FlyHi Sports Live lets a scorer enter points from a phone while the score bug, banners and summaries appear in OBS or vMix. It covers cricket, football, kabaddi, kho-kho, rugby, hockey, basketball, handball, volleyball, badminton, table tennis and athletics. A Match Day Pass is ₹299 and a Tournament Pass is ₹1,499. We can also send an operator to run it for you, from ₹4,999 per match day.",
+  },
+  {
     q: "Can you build a WhatsApp AI assistant for my business?",
     a: "Yes. We build WhatsApp and website assistants trained on your services, prices and FAQs. They answer enquiries, take bookings with reminders and hand over to a person when needed.",
   },
@@ -296,8 +300,43 @@ export const saasProducts: Product[] = [
   { name: "SANHEM Health", status: "Live", body: "AI-guided doctor discovery and booking with WhatsApp confirmations.", url: "https://sanhemhealth.com" },
   { name: "Event Desk", status: "Live", body: "Event registration, QR passes, venue check-in, badge printing and meal claims.", url: "https://events.flyhisocial.com" },
   { name: "FaceFind", status: "Live", body: "Guests take one selfie and find every event photo they're in, from an album a studio scans once.", url: "https://facefind.flyhisocial.com" },
-  { name: "FlyHi Cricket Live", status: "Live", body: "Run a cricket tournament: players register with a photo, every ball is scored from a phone, and OBS shows the live graphics.", url: "https://cricket.flyhisocial.com" },
+  { name: "FlyHi Sports Live", status: "Live", body: "Score a match from a phone and show live graphics in OBS or vMix. Cricket, football, kabaddi, kho-kho, rugby, hockey, basketball, handball, volleyball, badminton, table tennis and athletics.", url: "https://sports.flyhisocial.com" },
   { name: "NexusFlow Marketing OS", status: "Built", body: "Plan, publish and track social media across Instagram, Facebook, X and YouTube from one screen." },
+];
+
+/* FlyHi Sports Live: games and plans shown in the Sports section. */
+export type SportGame = { name: string; detail: string };
+export const sportGames: SportGame[] = [
+  { name: "Cricket", detail: "Ball by ball, player photos, tournament tables" },
+  { name: "Football", detail: "11, 7 or 5 a side, extra time, penalty shoot-out" },
+  { name: "Kabaddi", detail: "Raid, bonus, tackle, all out, green, yellow and red cards" },
+  { name: "Kho-Kho", detail: "Four turns, dismissals and +1 points" },
+  { name: "Rugby", detail: "Try 5, conversion 2, penalty and drop goals 3" },
+  { name: "Hockey", detail: "Four quarters, penalty corners, shoot-out" },
+  { name: "Basketball", detail: "2 and 3 pointers, free throws, quarters" },
+  { name: "Handball", detail: "Two halves, 7 metre goals, 2 minute suspensions" },
+  { name: "Volleyball", detail: "Best of 5 sets to 25, set scores on screen" },
+  { name: "Badminton", detail: "Best of 3 games to 21, win by two, cap at 30" },
+  { name: "Table tennis", detail: "Best of 5 games to 11" },
+  { name: "Athletics", detail: "Track heats and finals, jumps, throws, medal table" },
+];
+export type SportPlan = { name: string; price: string; unit: string; body: string; includes: string[]; hot?: boolean };
+export const sportPlans: SportPlan[] = [
+  {
+    name: "Match Day Pass", price: "₹299", unit: "per day, one tournament",
+    body: "For a single fixture day. You score and run the graphics yourself.",
+    includes: ["Every match that day, any game", "Scorer link and OBS or vMix overlay links", "Teams and players from an Excel or CSV file", "Fixtures, tables and result graphics"],
+  },
+  {
+    name: "Tournament Pass", price: "₹1,499", unit: "per tournament", hot: true,
+    body: "The whole tournament from the first fixture to the final. Most clubs and colleges pick this.",
+    includes: ["Unlimited matches and days", "Scorers added by email, one match or the whole event", "Points table, medal table and top lists", "Your logos and colours on every graphic"],
+  },
+  {
+    name: "We run it for you", price: "from ₹4,999", unit: "per match day",
+    body: "A FlyHi operator scores every match and runs the graphics on your stream.",
+    includes: ["Operator, OBS or vMix setup and a test run", "Remote anywhere in India", "On site in Odisha and camera crew quoted separately", "Full tournament broadcasts quoted after a call"],
+  },
 ];
 
 export const marquee = [
@@ -307,6 +346,7 @@ export const marquee = [
   "SaaS Tools",
   "Brand Identity",
   "Live Streaming",
+  "Sports Graphics",
   "Event Technology",
   "Content & Film",
   "Cloud & ERP",
