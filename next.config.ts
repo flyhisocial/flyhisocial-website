@@ -51,6 +51,10 @@ const nextConfig: NextConfig = {
       { source: "/services/app-web-development", destination: "/services/app-development", permanent: true },
     ];
   },
+  // Link-in-bio page (Instagram bio, invoice QR code). Static file in /public, served at /links.
+  async rewrites() {
+    return [{ source: "/links", destination: "/links.html" }];
+  },
   async headers() {
     if (!isProd) return []; // dev tooling needs eval; production gets the full set
     return [
